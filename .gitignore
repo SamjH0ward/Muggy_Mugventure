@@ -1,3 +1,12 @@
+# These are some examples of commonly ignored file patterns.
+# You should customize this list as applicable to your project.
+# GitHub provides a handy list for various environments and scenarios https://github.com/github/gitignore
+# Learn more about .gitignore:
+#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+#Upgrade log
+UpgradeLog.htm
+
 # Visual Studio 2015 user specific files
 .vs/
 
@@ -40,7 +49,9 @@
 *.sdf
 *.VC.db
 *.VC.opendb
-.vsconfig
+*.code-workspace
+/.vscode
+*.vscode
 
 # Precompiled Assets
 SourceArt/**/*.png
@@ -73,3 +84,12 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+

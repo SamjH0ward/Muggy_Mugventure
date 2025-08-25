@@ -93,3 +93,12 @@ DerivedDataCache/*
 *.mov
 *.wmv
 
+
+#Temp/cache files
+*.cache
+*.tmp
+*.bak
+*.wtmp
+
+Logs
+*.log

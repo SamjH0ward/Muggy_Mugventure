@@ -29,5 +29,7 @@ public:
  	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(ClampMin="0.0",ClampMax="1.0"))
 	float SlowDownPercentage;
+
+	
 };
 	

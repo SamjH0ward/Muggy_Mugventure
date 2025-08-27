@@ -16,6 +16,8 @@ void ACPP_Rotator::BeginPlay()
 {
 	Super::BeginPlay();
 	if(bUseOriginMinRotAngle) MinRotationAngle = GetActorRotation();
+	if(RotationVelocity.Pitch != 0.f) bVelocityIsPitch = true;
+
 }
 
 
@@ -52,6 +54,8 @@ void ACPP_Rotator::RotateObjectWithBackTrack(float dT)
 
 	FRotator Test = GetActorRotation() + RotationVelocity*dT;
 	Test = ClampValue(Test, MaxRotationAngle);
+
+	//UE_LOG(LogTemp, Display, TEXT("%f, %f, %f"), GetActorRotation().Pitch, GetActorRotation().Yaw, GetActorRotation().Roll);
 
 
 	SetActorRotation(Test);
@@ -109,14 +113,12 @@ bool ACPP_Rotator::IsRotLessThanZero(FRotator InRot)
 }
 
 bool ACPP_Rotator::IsRotXLessOrEqualToY(FRotator InRotX, FRotator InRotY)
-{	
-
+{
 	//Used to resolve all values being 0
 	if(FMath::IsNearlyEqual(InRotX.Yaw,InRotY.Yaw) && FMath::IsNearlyEqual(InRotX.Pitch,InRotY.Pitch) && FMath::IsNearlyEqual(InRotX.Roll,InRotY.Roll)) return true;
+	if(bVelocityIsPitch && FMath::IsNearlyEqual(InRotX.Pitch,InRotY.Pitch)) return true; //Fixes an issues where rotating on pitch does wired shit
 
-	if(InRotX.Yaw != 0 && InRotX.Yaw <= InRotY.Yaw) return true;
-	if(InRotX.Pitch != 0 && InRotX.Pitch <= InRotY.Pitch) return true;
-	if(InRotX.Roll != 0 && InRotX.Roll <= InRotY.Roll) return true;
+
     return false;
 }
 
@@ -135,6 +137,7 @@ void ACPP_Rotator::FlipTargetLocationAndVelocity()
 	RotationVelocity = ReturnNegativedFRotator(RotationVelocity);
 }
 
+
 FRotator ACPP_Rotator::ClampValue(FRotator InRotation, FRotator InClampValue)
 {
 	if(IsRotMoreThanZero(RotationVelocity))
@@ -150,7 +153,6 @@ FRotator ACPP_Rotator::ClampValue(FRotator InRotation, FRotator InClampValue)
 		InRotation.Pitch = InRotation.Pitch < InClampValue.Pitch ?  InClampValue.Pitch : InRotation.Pitch;
 		InRotation.Roll = InRotation.Roll < InClampValue.Roll ?  InClampValue.Roll : InRotation.Roll;
 	}
-
 
     return InRotation;
 }

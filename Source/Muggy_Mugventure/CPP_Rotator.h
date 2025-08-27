@@ -72,6 +72,8 @@ private:
 
 	void FlipTargetLocationAndVelocity();
 
+	bool bVelocityIsPitch{false};
+
 	FRotator ClampValue(FRotator InRotation, FRotator InClampValue);
 
 };

@@ -2,6 +2,7 @@
 
 
 #include "CPP_Rotator.h"
+#include "Math/UnrealMathUtility.h"
 
 // Sets default values
 ACPP_Rotator::ACPP_Rotator()
@@ -11,19 +12,35 @@ ACPP_Rotator::ACPP_Rotator()
 
 }
 
+void ACPP_Rotator::BeginPlay()
+{
+	Super::BeginPlay();
+	if(bUseOriginMinRotAngle) MinRotationAngle = GetActorRotation();
+}
+
 
 // Called every frame
 void ACPP_Rotator::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	
-	if(bShouldRotateBothWays)
+	switch (RotatorUseMethod)
 	{
-		RotateObjectWithBackTrack(DeltaTime);
-	}
-	else
-	{
+	case ERotatorUseType::Normal:
 		RotateObject(DeltaTime);
+		break;
+
+	case  ERotatorUseType::ReturnToMinPoint:
+		RotateObjectWithMinRot(DeltaTime);
+		break;
+
+	case ERotatorUseType::UseMaxRotationAngleBothWays:
+		RotateObjectWithBackTrack(DeltaTime);
+		break;
+
+	default:
+		RotateObject(DeltaTime);
+		break;
 	}
 
 	
@@ -48,6 +65,23 @@ void ACPP_Rotator::RotateObjectWithBackTrack(float dT)
 		FlipTargetLocationAndVelocity();
 	}//No else as nothing should be done if the velocity is 0 
 	
+}
+
+void ACPP_Rotator::RotateObjectWithMinRot(float dT)
+{
+	FRotator Test = GetActorRotation() + RotationVelocity*dT;
+	Test = IsRotMoreThanZero(RotationVelocity) ?  ClampValue(Test, MaxRotationAngle) : ClampValue(Test, MinRotationAngle);
+
+	SetActorRotation(Test);
+
+	if(IsRotMoreThanZero(RotationVelocity) && IsRotXLessOrEqualToY(MaxRotationAngle, GetActorRotation()))
+	{
+		RotationVelocity = ReturnNegativedFRotator(RotationVelocity);
+	}
+	else if (IsRotLessThanZero(RotationVelocity) && IsRotXLessOrEqualToY(GetActorRotation(), MinRotationAngle))
+	{
+		RotationVelocity = ReturnNegativedFRotator(RotationVelocity);
+	}//No else as nothing should be done if the velocity is 0 
 }
 
 void ACPP_Rotator::RotateObject(float dT)
@@ -75,11 +109,14 @@ bool ACPP_Rotator::IsRotLessThanZero(FRotator InRot)
 }
 
 bool ACPP_Rotator::IsRotXLessOrEqualToY(FRotator InRotX, FRotator InRotY)
-{
+{	
+
+	//Used to resolve all values being 0
+	if(FMath::IsNearlyEqual(InRotX.Yaw,InRotY.Yaw) && FMath::IsNearlyEqual(InRotX.Pitch,InRotY.Pitch) && FMath::IsNearlyEqual(InRotX.Roll,InRotY.Roll)) return true;
+
 	if(InRotX.Yaw != 0 && InRotX.Yaw <= InRotY.Yaw) return true;
 	if(InRotX.Pitch != 0 && InRotX.Pitch <= InRotY.Pitch) return true;
 	if(InRotX.Roll != 0 && InRotX.Roll <= InRotY.Roll) return true;
-
     return false;
 }
 
@@ -91,6 +128,7 @@ FRotator ACPP_Rotator::ReturnNegativedFRotator(FRotator InRot)
     return InRot;
 }
 
+
 void ACPP_Rotator::FlipTargetLocationAndVelocity()
 {
 	MaxRotationAngle = ReturnNegativedFRotator(MaxRotationAngle);
@@ -99,7 +137,7 @@ void ACPP_Rotator::FlipTargetLocationAndVelocity()
 
 FRotator ACPP_Rotator::ClampValue(FRotator InRotation, FRotator InClampValue)
 {
-	if(IsRotMoreThanZero(InClampValue))
+	if(IsRotMoreThanZero(RotationVelocity))
 	{
 		InRotation.Yaw = InRotation.Yaw > InClampValue.Yaw ?  InClampValue.Yaw : InRotation.Yaw;
 		InRotation.Pitch = InRotation.Pitch > InClampValue.Pitch ?  InClampValue.Pitch : InRotation.Pitch;

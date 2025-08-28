@@ -12,7 +12,8 @@ enum class ECurrentBehaviourType : uint8
 	Wander,
 	SearchForPlayer,
 	AttackingPlayer,
-	ReturningToNormal
+	ReturningToNormal,
+	ChaseCoolDown
 };
 
 class USceneComponent;
@@ -50,6 +51,7 @@ private:
 	void ReturnToNormal();
 	void SearchForPlayer();
 	void RotateToPlayer(FVector lookAtTarget);
+	void RestCanAttackAgain();
 
 	/*----------------------
 		  Components
@@ -85,14 +87,21 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"));
 	float WindowToShootAnyWay{3.0f};
 	
-	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(VisibleAnywhere, Category="Shooting", meta = (AllowPrivateAccess = "true"));
 	class ACharacter* PlayerPointer;
+
+	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"));
+	TSubclassOf<class ACPP_Fireball> FireballClass;
 
 	UPROPERTY(EditDefaultsOnly, Category="Behaviour", meta = (AllowPrivateAccess = "true"));
 	float ReturningToNormalBehaviourLength{5.0f};
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Behaviour", meta = (AllowPrivateAccess = "true"));
 	bool ShouldFollowSpline{true};
+
+	UPROPERTY(EditDefaultsOnly, Category="Behaviour", meta = (AllowPrivateAccess = "true"));
+	float ChaseCooldown{1.0f};
+
 
 	UPROPERTY(EditDefaultsOnly, Category="Movement", meta = (AllowPrivateAccess = "true"));
 	float RotationSpeed{};
@@ -109,8 +118,13 @@ private:
 
 	float ShootingRange{500.f};
 
+	bool HasShot{false};
+
 	UPROPERTY()
 	FTimerHandle ReturnToNormalTimer; 
+
+	UPROPERTY()
+	FTimerHandle ReturnToWanderTimer; 
 
 
 };

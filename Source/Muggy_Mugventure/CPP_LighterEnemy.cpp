@@ -9,7 +9,7 @@
 #include "Components/SceneComponent.h"
 #include "Components/SplineComponent.h"
 #include "GameFramework/Character.h"
-#include "Engine/World.h"
+#include "CPP_Fireball.h"
 
 
 // Sets default values
@@ -64,7 +64,7 @@ void ACPP_LighterEnemy::BeginPlay()
 
 void ACPP_LighterEnemy::HandleOverlap(UPrimitiveComponent *OverlappedComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult)
 {
-	if(OtherActor->ActorHasTag("Player")) CurrentSate = ECurrentBehaviourType::SearchForPlayer;
+	if(OtherActor->ActorHasTag("Player") && CurrentSate==ECurrentBehaviourType::Wander) CurrentSate = ECurrentBehaviourType::SearchForPlayer;
 }
 
 void ACPP_LighterEnemy::HandleLeavingDetectionRadius(UPrimitiveComponent *OverlappedComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex)
@@ -73,7 +73,10 @@ void ACPP_LighterEnemy::HandleLeavingDetectionRadius(UPrimitiveComponent *Overla
 	{
 		CurrentSate = ECurrentBehaviourType::ReturningToNormal;
 		GetWorld()->GetTimerManager().SetTimer(ReturnToNormalTimer,this,&ACPP_LighterEnemy::ReturnToNormal, ReturningToNormalBehaviourLength,false);
-
+	}
+	else if(OtherActor->ActorHasTag("Player"))
+	{
+		ReturnToNormal();
 	}
 	
 }
@@ -88,6 +91,11 @@ void ACPP_LighterEnemy::RotateToPlayer(FVector lookAtTarget)
 
 }
 
+void ACPP_LighterEnemy::RestCanAttackAgain()
+{
+	CurrentSate = ECurrentBehaviourType::Wander;
+}
+
 // Called every frame
 void ACPP_LighterEnemy::Tick(float DeltaTime)
 {
@@ -99,7 +107,10 @@ void ACPP_LighterEnemy::Tick(float DeltaTime)
 	{
 		case ECurrentBehaviourType::Wander:
 			return;
-		break;
+			break;
+		case ECurrentBehaviourType::ChaseCoolDown:
+			return;
+			break;
 		case ECurrentBehaviourType::SearchForPlayer:
 			SearchForPlayer();
 		break;
@@ -124,7 +135,7 @@ void ACPP_LighterEnemy::CheckIfShouldShoot(float DT)
 	FHitResult HitResult;
 	FVector Start = ProjectileSpawnPoint->GetComponentLocation();
 	FVector End = Start + ProjectileSpawnPoint->GetForwardVector() * ShootingRange;
-	DrawDebugLine(GetWorld(), Start, End, FColor::Red);
+
 	bool HasHit = GetWorld()->LineTraceSingleByChannel(HitResult,Start,End,ECC_GameTraceChannel2);
 	if(HasHit && HitResult.GetActor()->ActorHasTag("Player"))
 	{
@@ -141,15 +152,30 @@ void ACPP_LighterEnemy::CheckIfShouldShoot(float DT)
 
 void ACPP_LighterEnemy::Fire()
 {
-	CurrentWindowToShootAnyWay = WindowToShootAnyWay;
-	CurrentSate = ECurrentBehaviourType::ReturningToNormal;
-	GetWorld()->GetTimerManager().SetTimer(ReturnToNormalTimer,this,&ACPP_LighterEnemy::ReturnToNormal, ReturningToNormalBehaviourLength,false);
+	if(!HasShot)
+	{
+		ACPP_Fireball* Fireball = GetWorld()->SpawnActor<ACPP_Fireball>(FireballClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation());
+		Fireball->SetOwner(this);
+
+		CurrentWindowToShootAnyWay = WindowToShootAnyWay;
+		CurrentSate = ECurrentBehaviourType::ReturningToNormal;
+		GetWorld()->GetTimerManager().SetTimer(ReturnToNormalTimer,this,&ACPP_LighterEnemy::ReturnToNormal, ReturningToNormalBehaviourLength,false);
+
+		HasShot = true;
+	}	
 }
 
 void ACPP_LighterEnemy::ReturnToNormal()
 {
 	ShouldFollowSpline = true;
-	CurrentSate = ECurrentBehaviourType::Wander;
+	CurrentWindowToShootAnyWay = WindowToShootAnyWay;
+	if(CurrentSate != ECurrentBehaviourType::ChaseCoolDown) 
+		GetWorld()->GetTimerManager().SetTimer(ReturnToWanderTimer, this, &ACPP_LighterEnemy::RestCanAttackAgain, ChaseCooldown, false);
+	CurrentSate = ECurrentBehaviourType::ChaseCoolDown;
+
+	HasShot = false;
+
+	
 }
 
 void ACPP_LighterEnemy::SearchForPlayer()

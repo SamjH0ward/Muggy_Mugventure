@@ -7,6 +7,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/SceneComponent.h"
+#include "Components/SplineComponent.h"
 #include "GameFramework/Character.h"
 #include "Engine/World.h"
 
@@ -16,9 +17,17 @@ ACPP_LighterEnemy::ACPP_LighterEnemy()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	
+	LighterRootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
+	RootComponent = LighterRootComponent;
+
+
+	SplineComp = CreateDefaultSubobject<USplineComponent>(TEXT("Spline"));
+	SplineComp->SetupAttachment(LighterRootComponent);
+
 
 	CapsuleComp = CreateDefaultSubobject<UCapsuleComponent>(TEXT("CapsuleComp"));
-	RootComponent = CapsuleComp;
+	CapsuleComp->SetupAttachment(LighterRootComponent);
 	CapsuleComp->SetCollisionResponseToChannel(ECC_GameTraceChannel2, ECollisionResponse::ECR_Ignore);
 	
 
@@ -44,8 +53,9 @@ void ACPP_LighterEnemy::BeginPlay()
 
 	PlayerPointer = Cast<ACharacter>(UGameplayStatics::GetPlayerPawn(this, 0));
 
-	
+	ShootingRange = DetectionRadius->GetScaledSphereRadius();
 
+	CurrentWindowToShootAnyWay = WindowToShootAnyWay;
 
 	DetectionRadius->OnComponentBeginOverlap.AddDynamic(this, &ACPP_LighterEnemy::HandleOverlap);
 
@@ -54,12 +64,18 @@ void ACPP_LighterEnemy::BeginPlay()
 
 void ACPP_LighterEnemy::HandleOverlap(UPrimitiveComponent *OverlappedComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult)
 {
-	if(OtherActor->ActorHasTag("Player")) CanDetectPlayer = true;
+	if(OtherActor->ActorHasTag("Player")) CurrentSate = ECurrentBehaviourType::SearchForPlayer;
 }
 
 void ACPP_LighterEnemy::HandleLeavingDetectionRadius(UPrimitiveComponent *OverlappedComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex)
 {
-	if(OtherActor->ActorHasTag("Player")) ShouldAttackPlayer = CanDetectPlayer = false;
+	if(OtherActor->ActorHasTag("Player") && CurrentSate == ECurrentBehaviourType::AttackingPlayer)
+	{
+		CurrentSate = ECurrentBehaviourType::ReturningToNormal;
+		GetWorld()->GetTimerManager().SetTimer(ReturnToNormalTimer,this,&ACPP_LighterEnemy::ReturnToNormal, ReturningToNormalBehaviourLength,false);
+
+	}
+	
 }
 
 void ACPP_LighterEnemy::RotateToPlayer(FVector lookAtTarget)
@@ -77,25 +93,75 @@ void ACPP_LighterEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if(CanDetectPlayer && !ShouldAttackPlayer)
+	if(!PlayerPointer) return;
+
+	switch(CurrentSate)
 	{
-		FHitResult HitResult;
-		bool HasHit = GetWorld()->LineTraceSingleByChannel(HitResult,GetActorLocation(),PlayerPointer->GetActorLocation(),ECC_GameTraceChannel2);
-		
-		if(HasHit) 
-		{
-			ShouldAttackPlayer = HitResult.GetActor()->ActorHasTag("Player");
-			if(GEngine)
-     GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, FString::Printf(TEXT("World delta for current frame equals %s"), *HitResult.GetActor()->GetActorNameOrLabel()));
-			CanDetectPlayer = !ShouldAttackPlayer;
-		} 
+		case ECurrentBehaviourType::Wander:
+			return;
+		break;
+		case ECurrentBehaviourType::SearchForPlayer:
+			SearchForPlayer();
+		break;
+		case ECurrentBehaviourType::AttackingPlayer:
+			RotateToPlayer(PlayerPointer->GetActorLocation());
+			CheckIfShouldShoot(DeltaTime);
+
+		break;
+		case ECurrentBehaviourType::ReturningToNormal:
+			RotateToPlayer(PlayerPointer->GetActorLocation());
+		break;
+		default:
+		break;
 	}
+	
 
-	if(PlayerPointer && ShouldAttackPlayer) RotateToPlayer(PlayerPointer->GetActorLocation());
-
-
-
+	
 }
 
+void ACPP_LighterEnemy::CheckIfShouldShoot(float DT)
+{
+	FHitResult HitResult;
+	FVector Start = ProjectileSpawnPoint->GetComponentLocation();
+	FVector End = Start + ProjectileSpawnPoint->GetForwardVector() * ShootingRange;
+	DrawDebugLine(GetWorld(), Start, End, FColor::Red);
+	bool HasHit = GetWorld()->LineTraceSingleByChannel(HitResult,Start,End,ECC_GameTraceChannel2);
+	if(HasHit && HitResult.GetActor()->ActorHasTag("Player"))
+	{
+		Fire();
+	} 
+	else CurrentWindowToShootAnyWay -= 1.0f * DT;
 
+	if(CurrentWindowToShootAnyWay <= 0.0f)
+	{
+		Fire();
+	}
+	
+}
 
+void ACPP_LighterEnemy::Fire()
+{
+	CurrentWindowToShootAnyWay = WindowToShootAnyWay;
+	CurrentSate = ECurrentBehaviourType::ReturningToNormal;
+	GetWorld()->GetTimerManager().SetTimer(ReturnToNormalTimer,this,&ACPP_LighterEnemy::ReturnToNormal, ReturningToNormalBehaviourLength,false);
+}
+
+void ACPP_LighterEnemy::ReturnToNormal()
+{
+	ShouldFollowSpline = true;
+	CurrentSate = ECurrentBehaviourType::Wander;
+}
+
+void ACPP_LighterEnemy::SearchForPlayer()
+{
+	
+	FHitResult HitResult;
+	bool HasHit = GetWorld()->LineTraceSingleByChannel(HitResult,GetActorLocation(),PlayerPointer->GetActorLocation(),ECC_GameTraceChannel2);
+	
+	if(HasHit) 
+	{
+		CurrentSate = ECurrentBehaviourType::AttackingPlayer;
+		ShouldFollowSpline =  false;
+	} 
+	
+}

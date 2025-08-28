@@ -80,7 +80,7 @@ void ACPP_LighterEnemy::HandleLeavingDetectionRadius(UPrimitiveComponent *Overla
 
 void ACPP_LighterEnemy::RotateToPlayer(FVector lookAtTarget)
 {
-	FVector ToTarget = lookAtTarget - GetActorLocation();
+	FVector ToTarget = lookAtTarget - LighterMesh->GetComponentLocation();
 	FRotator LookAtRotation =  FRotator(0.0f, ToTarget.Rotation().Yaw,0.0f);
 
 	LighterMesh->SetWorldRotation(FMath::RInterpTo(LighterMesh->GetComponentRotation(), 

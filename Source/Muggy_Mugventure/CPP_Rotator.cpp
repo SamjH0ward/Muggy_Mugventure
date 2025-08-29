@@ -17,6 +17,7 @@ void ACPP_Rotator::BeginPlay()
 	Super::BeginPlay();
 	if(bUseOriginMinRotAngle) MinRotationAngle = GetActorRotation();
 	if(RotationVelocity.Pitch != 0.f) bVelocityIsPitch = true;
+	CheckWaitCondition();
 
 }
 
@@ -25,6 +26,9 @@ void ACPP_Rotator::BeginPlay()
 void ACPP_Rotator::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if(!ShouldRot)
+		return;
 	
 	switch (RotatorUseMethod)
 	{
@@ -81,11 +85,14 @@ void ACPP_Rotator::RotateObjectWithMinRot(float dT)
 	if(IsRotMoreThanZero(RotationVelocity) && IsRotXLessOrEqualToY(MaxRotationAngle, GetActorRotation()))
 	{
 		RotationVelocity = ReturnNegativedFRotator(RotationVelocity);
+		CheckWaitCondition();
 	}
 	else if (IsRotLessThanZero(RotationVelocity) && IsRotXLessOrEqualToY(GetActorRotation(), MinRotationAngle))
 	{
 		RotationVelocity = ReturnNegativedFRotator(RotationVelocity);
+		CheckWaitCondition();
 	}//No else as nothing should be done if the velocity is 0 
+
 }
 
 void ACPP_Rotator::RotateObject(float dT)
@@ -137,6 +144,19 @@ void ACPP_Rotator::FlipTargetLocationAndVelocity()
 	RotationVelocity = ReturnNegativedFRotator(RotationVelocity);
 }
 
+void ACPP_Rotator::ResetShouldRot()
+{
+	ShouldRot = true;
+}
+
+void ACPP_Rotator::CheckWaitCondition()
+{
+	if(WaitTime>0.0f)
+	{
+		GetWorld()->GetTimerManager().SetTimer(WaitTimer, this, &ACPP_Rotator::ResetShouldRot, WaitTime, false);
+		ShouldRot = false;
+	}
+}
 
 FRotator ACPP_Rotator::ClampValue(FRotator InRotation, FRotator InClampValue)
 {

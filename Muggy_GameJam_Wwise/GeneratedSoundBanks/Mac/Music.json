@@ -1,0 +1,292 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3991942870",
+    "Type": "User",
+    "GUID": "{E43C5D3C-80AC-4D9A-8941-D6D2A6544F3B}",
+    "Language": "SFX",
+    "Hash": "{CEBD54F3-7054-8E85-F1BB-A6E92A523468}",
+    "ObjectPath": "\\SoundBanks\\Music_Work_Unit\\Music",
+    "ShortName": "Music",
+    "Path": "Music.bnk",
+    "Media": [
+     {
+      "Id": "67129993",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music\\Beach_TEMP.wav",
+      "CachePath": "5C/{5C3B1077-2C18-D6DF-898F-454A2B701643}.wem"
+     },
+     {
+      "Id": "98208193",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music\\Boss_TEMP.wav",
+      "CachePath": "85/{855885BF-BA85-5D06-1E6A-22583AA10881}.wem"
+     },
+     {
+      "Id": "146269860",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music\\Vibrant_TEMP.wav",
+      "CachePath": "B4/{B41616FD-96B4-7B21-9382-B568D707AC29}.wem"
+     },
+     {
+      "Id": "626063295",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music\\Menu_TEMP.wav",
+      "CachePath": "15/{15DDC170-03E5-B103-996D-131B3084980B}.wem"
+     },
+     {
+      "Id": "721866178",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music\\Void_Intro_TEMP.wav",
+      "CachePath": "38/{386D5538-A09F-F0B0-98CF-6814B34550C7}.wem"
+     },
+     {
+      "Id": "1014008810",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music\\Final_Zone_TEMP.wav",
+      "CachePath": "1A/{1A41D188-BCA3-A8B4-989D-E0C025F21235}.wem"
+     },
+     {
+      "Id": "1016511180",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music\\Rail_TEMP.wav",
+      "CachePath": "96/{96DAE530-6347-E6AB-0446-35D22B5EF3C2}.wem"
+     },
+     {
+      "Id": "1032591745",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Music\\Void_TEMP.wav",
+      "CachePath": "2D/{2D44F5E4-2E74-2762-FCF9-EE4B5A482DBD}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2932040671",
+      "Name": "Play_Music",
+      "ObjectPath": "\\Events\\Music_Work_Unit\\Music_Events\\Play_Music",
+      "GUID": "{9C61C775-F987-4AEC-80D2-D52A6F057D3E}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4091656514",
+         "Id": "89505537",
+         "GUID": "{23914207-83B0-4E9E-B497-071ED943E2CC}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "4075332698",
+           "GUID": "{F0149EC7-4DAE-4382-891D-E811376F22ED}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "67129993"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "8379913",
+           "GUID": "{E1E27ECC-A53E-4D4D-AC5A-9C3D131F2142}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "146269860"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "3370470011",
+           "GUID": "{4065148E-24B1-4B49-82E5-577ACBD43609}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "1032591745"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "3653631999",
+           "GUID": "{40FD81D7-B234-47F6-80C0-2531AE132243}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "721866178"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "2537217085",
+           "GUID": "{0096E1B2-A390-42F2-8130-9E57F212790B}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "1014008810"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "1560169506",
+           "GUID": "{BFFFCA50-B174-4A92-B220-5C609B44F2BF}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "98208193"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "2043403997",
+           "GUID": "{8D3F87D9-D4CF-4D44-825D-1E81F670AE5D}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "1016511180"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4091656514",
+         "Id": "2607556080",
+         "GUID": "{980C5EC3-BD5D-4224-8AC4-0D5C01D584E0}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "626063295"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "4091656514",
+      "Name": "GameState",
+      "ObjectPath": "\\States\\Default Work Unit\\GameState",
+      "GUID": "{E7735D46-00E2-46E3-9ABA-74DAD9EC6184}",
+      "States": [
+       {
+        "Id": "89505537",
+        "Name": "Gameplay",
+        "ObjectPath": "\\States\\Default Work Unit\\GameState\\Gameplay",
+        "GUID": "{23914207-83B0-4E9E-B497-071ED943E2CC}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\GameState\\None",
+        "GUID": "{CD3107CA-11B5-47B2-AFAE-9F741E73151F}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\GameState\\Menu",
+        "GUID": "{980C5EC3-BD5D-4224-8AC4-0D5C01D584E0}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1176052424",
+      "Name": "Location",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Location",
+      "GUID": "{F6324116-CC55-4626-89F4-F37F0165978F}",
+      "Switches": [
+       {
+        "Id": "8379913",
+        "Name": "Vibrant",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Location\\Vibrant",
+        "GUID": "{E1E27ECC-A53E-4D4D-AC5A-9C3D131F2142}"
+       },
+       {
+        "Id": "1560169506",
+        "Name": "Boss",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Location\\Boss",
+        "GUID": "{BFFFCA50-B174-4A92-B220-5C609B44F2BF}"
+       },
+       {
+        "Id": "2043403997",
+        "Name": "Rail",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Location\\Rail",
+        "GUID": "{8D3F87D9-D4CF-4D44-825D-1E81F670AE5D}"
+       },
+       {
+        "Id": "2537217085",
+        "Name": "FinalZone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Location\\FinalZone",
+        "GUID": "{0096E1B2-A390-42F2-8130-9E57F212790B}"
+       },
+       {
+        "Id": "3370470011",
+        "Name": "Void",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Location\\Void",
+        "GUID": "{4065148E-24B1-4B49-82E5-577ACBD43609}"
+       },
+       {
+        "Id": "3653631999",
+        "Name": "VoidIntro",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Location\\VoidIntro",
+        "GUID": "{40FD81D7-B234-47F6-80C0-2531AE132243}"
+       },
+       {
+        "Id": "4075332698",
+        "Name": "Beach",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Location\\Beach",
+        "GUID": "{F0149EC7-4DAE-4382-891D-E811376F22ED}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{1250006E-F1A0-523F-C413-1F25354B246E}"
+ }
+}

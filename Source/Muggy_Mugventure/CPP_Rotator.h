@@ -44,6 +44,9 @@ private:
 	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess="true"))
 	bool bUseOriginMinRotAngle{true};
 
+	UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess="true"))
+	float WaitTime{0.0f};
+
 
 	
 
@@ -74,6 +77,16 @@ private:
 
 	bool bVelocityIsPitch{false};
 
+	bool ShouldRot{true};
+
+	void ResetShouldRot();
+
+	void CheckWaitCondition();
+
 	FRotator ClampValue(FRotator InRotation, FRotator InClampValue);
+
+	FTimerHandle WaitTimer;
+
+
 
 };

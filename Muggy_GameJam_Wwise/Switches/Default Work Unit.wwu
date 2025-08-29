@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0BD0F74A-7306-4D0E-B2A5-D9CF559F4E6B}" SchemaVersion="123">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{0BD0F74A-7306-4D0E-B2A5-D9CF559F4E6B}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Location" ID="{F6324116-CC55-4626-89F4-F37F0165978F}">
+					<ChildrenList>
+						<Switch Name="Beach" ID="{F0149EC7-4DAE-4382-891D-E811376F22ED}"/>
+						<Switch Name="Vibrant" ID="{E1E27ECC-A53E-4D4D-AC5A-9C3D131F2142}"/>
+						<Switch Name="Void" ID="{4065148E-24B1-4B49-82E5-577ACBD43609}"/>
+						<Switch Name="VoidIntro" ID="{40FD81D7-B234-47F6-80C0-2531AE132243}"/>
+						<Switch Name="FinalZone" ID="{0096E1B2-A390-42F2-8130-9E57F212790B}"/>
+						<Switch Name="Boss" ID="{BFFFCA50-B174-4A92-B220-5C609B44F2BF}"/>
+						<Switch Name="Rail" ID="{8D3F87D9-D4CF-4D44-825D-1E81F670AE5D}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

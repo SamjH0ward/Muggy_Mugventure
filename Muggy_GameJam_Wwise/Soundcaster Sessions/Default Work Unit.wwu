@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D4540A75-7ECC-4F89-A900-6A6158423C50}" SchemaVersion="123">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{D4540A75-7ECC-4F89-A900-6A6158423C50}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Muggy_Soundcaster" ID="{4246479E-91B4-4071-8B78-27609C3FB87C}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Music" ID="{9C61C775-F987-4AEC-80D2-D52A6F057D3E}" WorkUnitID="{082C0726-A1B6-402F-B644-19F73FE1EE41}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Gameplay" ID="{23914207-83B0-4E9E-B497-071ED943E2CC}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Beach" ID="{F0149EC7-4DAE-4382-891D-E811376F22ED}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

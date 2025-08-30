@@ -132,10 +132,48 @@
         "GUID": "{F0149EC7-4DAE-4382-891D-E811376F22ED}"
        }
       ]
+     },
+     {
+      "Id": "1834394558",
+      "Name": "Surface",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Surface",
+      "GUID": "{B0157E37-085F-487D-A8D8-B04F469A92AE}",
+      "Switches": [
+       {
+        "Id": "803837735",
+        "Name": "Sand",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Sand",
+        "GUID": "{181EF92F-2B55-4098-97E2-56C71F010EBD}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Stone",
+        "GUID": "{2383746C-1E6D-4326-B603-51DB50DD0CEC}"
+       },
+       {
+        "Id": "2195636714",
+        "Name": "Dirt",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Dirt",
+        "GUID": "{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}"
+       },
+       {
+        "Id": "2654748154",
+        "Name": "Water",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Water",
+        "GUID": "{9A447EDF-8EA4-4350-B7AA-574E7D7F1528}"
+       },
+       {
+        "Id": "4248645337",
+        "Name": "Grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Surface\\Grass",
+        "GUID": "{C138DEEC-FE4A-4C93-97B4-C4910E8C11E4}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{A191FF72-6CF7-2831-F63B-7F814A1D190D}"
+  "FileHash": "{CB20D38B-7A4F-6C63-5C7B-7913BB46DE5E}"
  }
 }

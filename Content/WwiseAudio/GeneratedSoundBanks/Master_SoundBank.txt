@@ -1,9 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1602358412	Play_Footstep			\Sound_Work_Unit\SFX_Events\Play_Footstep	
 	2932040671	Play_Music			\Music_Work_Unit\Music_Events\Play_Music	
 	3187507146	Play_TEST			\Sound_Work_Unit\SFX_Events\Play_TEST	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1176052424	Location			\Default Work Unit\Location	
+	1834394558	Surface			\Default Work Unit\Surface	
 
 Switch	ID	Name	Switch Group			Notes
 	8379913	Vibrant	Location			
@@ -13,6 +15,11 @@ Switch	ID	Name	Switch Group			Notes
 	3370470011	Void	Location			
 	3653631999	VoidIntro	Location			
 	4075332698	Beach	Location			
+	803837735	Sand	Surface			
+	1216965916	Stone	Surface			
+	2195636714	Dirt	Surface			
+	2654748154	Water	Surface			
+	4248645337	Grass	Surface			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	4091656514	GameState			\Default Work Unit\GameState	
@@ -23,13 +30,38 @@ State	ID	Name	State Group			Notes
 	2607556080	Menu	GameState			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	1839762	sx_plr_fs_sand_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\CA\{CA5DBEE9-4F5D-8437-42CE-21DE732EFB3A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_02		19296
 	67129993	Beach_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\5C\{5C3B1077-2C18-D6DF-898F-454A2B701643}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Beach\Beach_TEMP\Beach_TEMP		9160580
+	70033265	sx_plr_fs_grass_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\EB\{EBA8B7CF-2E1D-CC39-52E0-774F95366C48}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_03		19296
+	76982888	sx_plr_fs_grass_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\19\{19C62E96-2A95-EFB8-775B-10990AC9F3B3}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_01		19296
 	98208193	Boss_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\85\{855885BF-BA85-5D06-1E6A-22583AA10881}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Boss\Boss_TEMP\Boss_TEMP		9715760
 	146269860	Vibrant_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\B4\{B41616FD-96B4-7B21-9382-B568D707AC29}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Vibrant\Vibrant_TEMP\Vibrant_TEMP		9160580
+	236992628	sx_plr_fs_stone_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\84\{84BD677D-1D83-446B-0562-61F083C1955D}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_02		14496
+	298052121	sx_plr_fs_dirt_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\62\{621E5E56-AAF8-2A8C-12C8-A813A2ABEF70}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_03		9696
+	341514687	sx_plr_fs_grass_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\7D\{7D7491FF-E876-F441-1B0A-CBE87A515DEE}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_02		19296
+	342495564	sx_plr_fs_dirt_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\3B\{3B6209DE-2692-F48B-1079-7EB78E97B72B}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_01		9696
+	375847829	sx_plr_fs_dirt_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\DC\{DC20EE65-1350-FCD6-A896-592AAE2AA78A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_05		9696
+	405884899	sx_plr_fs_water_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\3A\{3AE73278-3BD8-8824-7E3F-3FAAC767261A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_04		24096
+	406784708	sx_plr_fs_water_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\2D\{2DA11649-F22D-3B06-7D4E-B2951D2D6EF1}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_05		24096
+	428276764	sx_plr_fs_grass_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\43\{43104A58-2D06-726C-1A25-2F6E73452289}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_05		19296
+	446875601	sx_plr_fs_water_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\FD\{FD8F806A-3A83-C233-471E-9DF54190E819}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_03		24096
+	507904719	sx_plr_fs_stone_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\51\{511D773B-82D8-C96D-486D-3437F94D10D6}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_01		14496
+	517041241	sx_plr_fs_sand_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\29\{2933CC03-36FD-9599-C2E4-7FC72D7F89D9}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_01		19296
+	524475210	sx_plr_fs_dirt_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\75\{756E92AF-0586-A411-8BB3-3C6A38544F8F}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_04		9696
+	566973716	sx_plr_fs_water_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\B3\{B321FB84-B79D-7554-24A4-0D442AA0C09C}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_02		24096
 	626063295	Menu_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\15\{15DDC170-03E5-B103-996D-131B3084980B}.wem		\Interactive Music Hierarchy\Music_System\Master_Music_Switch\Menu\Menu_TEMP\Menu_TEMP		5274316
+	643739502	sx_plr_fs_water_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\A1\{A1FDBE19-DB98-276B-3212-45070B3068EB}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_01		24096
+	646045234	sx_plr_fs_sand_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\9D\{9D70EBD3-CCD1-5756-15D5-FC4DA92553BF}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_05		19296
+	686839431	sx_plr_fs_sand_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\EE\{EE4B3301-B4C0-FB45-EC67-50F259712702}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_03		19296
+	688030103	sx_plr_fs_stone_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\AA\{AAC9ADFE-A064-3E0F-81A7-616C0B1E54FB}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_03		14496
+	698831303	sx_plr_fs_grass_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\BE\{BE10A3E4-AF8F-61D3-A99C-1C95335B1B56}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_04		19296
 	721866178	Void_Intro_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\38\{386D5538-A09F-F0B0-98CF-6814B34550C7}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Void Intro\Void_Intro_TEMP\Void_Intro_TEMP		4719136
+	911277979	sx_plr_fs_dirt_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\C1\{C1F89EED-918A-591D-4D2F-824638F5A211}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_02		9696
+	934094138	sx_plr_fs_stone_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\1A\{1A5AF55F-274B-95A1-C747-884B4594FA40}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_04		14496
 	978490900	sx_plr_pistol_fire_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\90\{90CD3E1B-9E3C-4955-BACB-A12DF0EC00EF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST\sx_plr_pistol_fire_01		113888
 	1014008810	Final_Zone_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\1A\{1A41D188-BCA3-A8B4-989D-E0C025F21235}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\FinalZone\Final_Zone_TEMP\Final_Zone_TEMP		9160580
 	1016511180	Rail_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\96\{96DAE530-6347-E6AB-0446-35D22B5EF3C2}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Rail\Rail_TEMP\Rail_TEMP		2498412
+	1023279465	sx_plr_fs_sand_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\7C\{7C7D8C9F-04EF-7C6C-DC58-5D3169CA4F70}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_04		19296
 	1032591745	Void_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\2D\{2D44F5E4-2E74-2762-FCF9-EE4B5A482DBD}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Void\Void_TEMP\Void_TEMP		17488292
+	1049440914	sx_plr_fs_stone_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\58\{58BA1D1E-7AED-7BA4-AB5F-4C8808089668}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_05		14496
 

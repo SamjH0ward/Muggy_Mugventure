@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{32B21649-5718-4CE3-9F80-C787540E0DA8}" SchemaVersion="123">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{32B21649-5718-4CE3-9F80-C787540E0DA8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{32B21649-5718-4CE3-9F80-C787540E0DA8}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Master_SoundBank" ID="{DF965127-6E7C-4E54-B453-594B49BF5A27}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Ambience" ID="{F5F6F3D5-33B8-40DA-B10F-289DE8B5FA9C}" WorkUnitID="{F5F6F3D5-33B8-40DA-B10F-289DE8B5FA9C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{4F2CF11A-5BE5-40FC-A966-34C2A7F44E81}" WorkUnitID="{4F2CF11A-5BE5-40FC-A966-34C2A7F44E81}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Environment" ID="{D6A97709-B208-42A9-995E-56224099145C}" WorkUnitID="{D6A97709-B208-42A9-995E-56224099145C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music_System" ID="{7465F243-0F8D-4453-B1DC-E774DE803884}" WorkUnitID="{7465F243-0F8D-4453-B1DC-E774DE803884}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{57DFBBFA-8E09-4881-A209-F337F4E38A4C}" WorkUnitID="{57DFBBFA-8E09-4881-A209-F337F4E38A4C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enemies" ID="{FA4E5BB1-7B23-48C2-B577-EC04551FB5EE}" WorkUnitID="{FA4E5BB1-7B23-48C2-B577-EC04551FB5EE}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{23C12DE6-8261-4AFD-8718-CB6B2EACE233}" WorkUnitID="{23C12DE6-8261-4AFD-8718-CB6B2EACE233}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player" ID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

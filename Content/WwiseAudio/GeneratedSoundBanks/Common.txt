@@ -1,11 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
+	313945480	Play_JumpReleasePower			\Sound_Work_Unit\SFX_Events\Jump Events\Play_JumpReleasePower	
 	1602358412	Play_Footstep			\Sound_Work_Unit\SFX_Events\Play_Footstep	
+	2139278988	Stop_JumpBuild			\Sound_Work_Unit\SFX_Events\Jump Events\Stop_JumpBuild	
+	2238482621	Play_JumpRelease			\Sound_Work_Unit\SFX_Events\Jump Events\Play_JumpRelease	
+	2758568302	Play_JumpNode			\Sound_Work_Unit\SFX_Events\Jump Events\Play_JumpNode	
+	3091288642	Play_JumpBuild			\Sound_Work_Unit\SFX_Events\Jump Events\Play_JumpBuild	
 	3187507146	Play_TEST			\Sound_Work_Unit\SFX_Events\Play_TEST	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
+	939619482	Jump_ChargeLevel			\Default Work Unit\Jump_ChargeLevel	
 	1834394558	Surface			\Default Work Unit\Surface	
 
 Switch	ID	Name	Switch Group			Notes
+	3377512836	Jump_Level_01	Jump_ChargeLevel			
+	3377512838	Jump_Level_03	Jump_ChargeLevel			
+	3377512839	Jump_Level_02	Jump_ChargeLevel			
 	803837735	Sand	Surface			
 	1216965916	Stone	Surface			
 	2195636714	Dirt	Surface			
@@ -13,30 +22,39 @@ Switch	ID	Name	Switch Group			Notes
 	4248645337	Grass	Surface			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	1839762	sx_plr_fs_sand_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\CA\{CA5DBEE9-4F5D-8437-42CE-21DE732EFB3A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_02		19296
-	70033265	sx_plr_fs_grass_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\EB\{EBA8B7CF-2E1D-CC39-52E0-774F95366C48}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_03		19296
-	76982888	sx_plr_fs_grass_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\19\{19C62E96-2A95-EFB8-775B-10990AC9F3B3}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_01		19296
-	236992628	sx_plr_fs_stone_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\84\{84BD677D-1D83-446B-0562-61F083C1955D}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_02		14496
-	298052121	sx_plr_fs_dirt_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\62\{621E5E56-AAF8-2A8C-12C8-A813A2ABEF70}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_03		9696
-	341514687	sx_plr_fs_grass_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\7D\{7D7491FF-E876-F441-1B0A-CBE87A515DEE}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_02		19296
-	342495564	sx_plr_fs_dirt_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\3B\{3B6209DE-2692-F48B-1079-7EB78E97B72B}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_01		9696
-	375847829	sx_plr_fs_dirt_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\DC\{DC20EE65-1350-FCD6-A896-592AAE2AA78A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_05		9696
-	405884899	sx_plr_fs_water_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\3A\{3AE73278-3BD8-8824-7E3F-3FAAC767261A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_04		24096
-	406784708	sx_plr_fs_water_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\2D\{2DA11649-F22D-3B06-7D4E-B2951D2D6EF1}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_05		24096
-	428276764	sx_plr_fs_grass_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\43\{43104A58-2D06-726C-1A25-2F6E73452289}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_05		19296
-	446875601	sx_plr_fs_water_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\FD\{FD8F806A-3A83-C233-471E-9DF54190E819}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_03		24096
-	507904719	sx_plr_fs_stone_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\51\{511D773B-82D8-C96D-486D-3437F94D10D6}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_01		14496
-	517041241	sx_plr_fs_sand_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\29\{2933CC03-36FD-9599-C2E4-7FC72D7F89D9}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_01		19296
-	524475210	sx_plr_fs_dirt_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\75\{756E92AF-0586-A411-8BB3-3C6A38544F8F}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_04		9696
-	566973716	sx_plr_fs_water_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\B3\{B321FB84-B79D-7554-24A4-0D442AA0C09C}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_02		24096
-	643739502	sx_plr_fs_water_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\A1\{A1FDBE19-DB98-276B-3212-45070B3068EB}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_01		24096
-	646045234	sx_plr_fs_sand_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\9D\{9D70EBD3-CCD1-5756-15D5-FC4DA92553BF}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_05		19296
-	686839431	sx_plr_fs_sand_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\EE\{EE4B3301-B4C0-FB45-EC67-50F259712702}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_03		19296
-	688030103	sx_plr_fs_stone_03	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\AA\{AAC9ADFE-A064-3E0F-81A7-616C0B1E54FB}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_03		14496
-	698831303	sx_plr_fs_grass_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\BE\{BE10A3E4-AF8F-61D3-A99C-1C95335B1B56}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_04		19296
-	911277979	sx_plr_fs_dirt_02	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\C1\{C1F89EED-918A-591D-4D2F-824638F5A211}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_02		9696
-	934094138	sx_plr_fs_stone_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\1A\{1A5AF55F-274B-95A1-C747-884B4594FA40}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_04		14496
-	978490900	sx_plr_pistol_fire_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\90\{90CD3E1B-9E3C-4955-BACB-A12DF0EC00EF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST\sx_plr_pistol_fire_01		113888
-	1023279465	sx_plr_fs_sand_04	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\7C\{7C7D8C9F-04EF-7C6C-DC58-5D3169CA4F70}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_04		19296
-	1049440914	sx_plr_fs_stone_05	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\58\{58BA1D1E-7AED-7BA4-AB5F-4C8808089668}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_05		14496
+	1839762	sx_plr_fs_sand_02	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\CA\{CA5DBEE9-4F5D-8437-42CE-21DE732EFB3A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_02		19296
+	10736405	sx_plr_jump_chargeNode_04	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\8A\{8A4B855C-9DCC-487E-FF11-25EFF9FD5883}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Jump\Jump_chargeNodes\sx_plr_jump_chargeNode_04		240096
+	48292384	sx_plr_jump_foley	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\F6\{F63F93CE-2F5B-1F65-157F-7F5358EF6305}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Jump\Jump_Release_Power\sx_plr_jump_foley		411524
+	70033265	sx_plr_fs_grass_03	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\EB\{EBA8B7CF-2E1D-CC39-52E0-774F95366C48}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_03		19296
+	76982888	sx_plr_fs_grass_01	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\19\{19C62E96-2A95-EFB8-775B-10990AC9F3B3}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_01		19296
+	236992628	sx_plr_fs_stone_02	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\84\{84BD677D-1D83-446B-0562-61F083C1955D}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_02		14496
+	298052121	sx_plr_fs_dirt_03	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\62\{621E5E56-AAF8-2A8C-12C8-A813A2ABEF70}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_03		9696
+	338103151	sx_plr_jump_chargeNode_01	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\AC\{AC24CC47-A341-DED3-5F56-BD09BF980F52}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Jump\Jump_chargeNodes\sx_plr_jump_chargeNode_01		240096
+	341514687	sx_plr_fs_grass_02	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\7D\{7D7491FF-E876-F441-1B0A-CBE87A515DEE}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_02		19296
+	342495564	sx_plr_fs_dirt_01	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\3B\{3B6209DE-2692-F48B-1079-7EB78E97B72B}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_01		9696
+	375847829	sx_plr_fs_dirt_05	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\DC\{DC20EE65-1350-FCD6-A896-592AAE2AA78A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_05		9696
+	395607440	sx_plr_jump_foley_02	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\A6\{A67444AD-31FE-EBCB-FC72-C069FC84962D}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Jump\Jump_Release_Power\sx_plr_jump_foley_02		481340
+	405884899	sx_plr_fs_water_04	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\3A\{3AE73278-3BD8-8824-7E3F-3FAAC767261A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_04		24096
+	406784708	sx_plr_fs_water_05	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\2D\{2DA11649-F22D-3B06-7D4E-B2951D2D6EF1}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_05		24096
+	406953845	Jump_ChargeUp	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\AA\{AA8721B8-DEF9-0C14-4660-87C74E1009A3}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Jump\Jump_ChargeUp		376716
+	428276764	sx_plr_fs_grass_05	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\43\{43104A58-2D06-726C-1A25-2F6E73452289}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_05		19296
+	446875601	sx_plr_fs_water_03	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\FD\{FD8F806A-3A83-C233-471E-9DF54190E819}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_03		24096
+	507904719	sx_plr_fs_stone_01	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\51\{511D773B-82D8-C96D-486D-3437F94D10D6}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_01		14496
+	517041241	sx_plr_fs_sand_01	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\29\{2933CC03-36FD-9599-C2E4-7FC72D7F89D9}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_01		19296
+	524475210	sx_plr_fs_dirt_04	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\75\{756E92AF-0586-A411-8BB3-3C6A38544F8F}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_04		9696
+	566973716	sx_plr_fs_water_02	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\B3\{B321FB84-B79D-7554-24A4-0D442AA0C09C}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_02		24096
+	643739502	sx_plr_fs_water_01	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\A1\{A1FDBE19-DB98-276B-3212-45070B3068EB}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Water\sx_plr_fs_water_01		24096
+	646045234	sx_plr_fs_sand_05	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\9D\{9D70EBD3-CCD1-5756-15D5-FC4DA92553BF}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_05		19296
+	686839431	sx_plr_fs_sand_03	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\EE\{EE4B3301-B4C0-FB45-EC67-50F259712702}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_03		19296
+	688030103	sx_plr_fs_stone_03	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\AA\{AAC9ADFE-A064-3E0F-81A7-616C0B1E54FB}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_03		14496
+	698831303	sx_plr_fs_grass_04	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\BE\{BE10A3E4-AF8F-61D3-A99C-1C95335B1B56}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Grass\sx_plr_fs_grass_04		19296
+	723139728	sx_plr_jump_chargeNode_02	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\A3\{A3930354-7BFF-EF5D-2A01-A027A6B97297}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Jump\Jump_chargeNodes\sx_plr_jump_chargeNode_02		240096
+	784937900	Jump_Foley_02	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\22\{220BBC56-835B-56EA-6922-FD3F5A3B30F8}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Jump\Jump_Foley\Jump_Foley_02		112028
+	867306805	Jump_MaxChargeLoop	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\80\{808A02CF-A098-50C3-25F7-C51ACC98DDC1}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Jump\Jump_MaxChargeLoop		1327264
+	911277979	sx_plr_fs_dirt_02	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\C1\{C1F89EED-918A-591D-4D2F-824638F5A211}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Dirt\sx_plr_fs_dirt_02		9696
+	934094138	sx_plr_fs_stone_04	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\1A\{1A5AF55F-274B-95A1-C747-884B4594FA40}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_04		14496
+	966757165	Jump_Foley_01	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\45\{454E57D8-7394-9BF1-D103-43EE63261E4C}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Jump\Jump_Foley\Jump_Foley_01		66650
+	978490900	sx_plr_pistol_fire_01	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\90\{90CD3E1B-9E3C-4955-BACB-A12DF0EC00EF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST\sx_plr_pistol_fire_01		113888
+	1023279465	sx_plr_fs_sand_04	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\7C\{7C7D8C9F-04EF-7C6C-DC58-5D3169CA4F70}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_04		19296
+	1049440914	sx_plr_fs_stone_05	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\58\{58BA1D1E-7AED-7BA4-AB5F-4C8808089668}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Stone\sx_plr_fs_stone_05		14496
 

@@ -23,6 +23,13 @@
 						<Switch Name="Sand" ID="{181EF92F-2B55-4098-97E2-56C71F010EBD}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Jump_ChargeLevel" ID="{EC13F30C-7873-4BFE-B6CB-20D0FBF29956}">
+					<ChildrenList>
+						<Switch Name="Jump_Level_01" ID="{B4BAAA97-07DE-4E68-AB6B-7ABD3D843661}"/>
+						<Switch Name="Jump_Level_02" ID="{EDC9374E-6C4F-4B46-8B7B-455F4777E880}"/>
+						<Switch Name="Jump_Level_03" ID="{C97172A3-243A-4243-8A50-4E95C7905F0B}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

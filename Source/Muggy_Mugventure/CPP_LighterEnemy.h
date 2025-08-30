@@ -13,7 +13,8 @@ enum class ECurrentBehaviourType : uint8
 	SearchForPlayer,
 	AttackingPlayer,
 	ReturningToNormal,
-	ChaseCoolDown
+	ChaseCoolDown,
+	InAreaOnCoolDown,
 };
 
 class USceneComponent;
@@ -77,14 +78,10 @@ private:
 		  Exposed Vars
 	-------------------------*/
 
-
-	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"))
-	float FireRate{};
-
-	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, Category="Shooting", meta = (AllowPrivateAccess = "true"))
 	int Damage{};
 
-	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, Category="Shooting", meta = (AllowPrivateAccess = "true"))
 	float WindowToShootAnyWay{3.0f};
 	
 	UPROPERTY(VisibleAnywhere, Category="Shooting", meta = (AllowPrivateAccess = "true"))
@@ -93,17 +90,20 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class ACPP_Fireball> FireballClass;
 
-	UPROPERTY(EditDefaultsOnly, Category="Behaviour", meta = (AllowPrivateAccess = "true"))
-	float ReturningToNormalBehaviourLength{5.0f};
+	UPROPERTY(EditAnywhere, Category="Behaviour", meta = (AllowPrivateAccess = "true"))
+	float ReturningToNormalBehaviourLength{3.0f};
+
+	UPROPERTY(EditAnywhere, Category="Behaviour", meta = (AllowPrivateAccess = "true"))
+	float AdditionalDetectionRadiusRangeOnEnteredDetectionRadius{150.f};
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Behaviour", meta = (AllowPrivateAccess = "true"))
 	bool ShouldFollowSpline{true};
 
-	UPROPERTY(EditDefaultsOnly, Category="Behaviour", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, Category="Behaviour", meta = (AllowPrivateAccess = "true"))
 	float ChaseCooldown{1.0f};
 
 
-	UPROPERTY(EditDefaultsOnly, Category="Movement", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere, Category="Movement", meta = (AllowPrivateAccess = "true"))
 	float RotationSpeed{};
 
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
@@ -112,17 +112,17 @@ private:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
 	float RotOffset{};
 
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(VisibleDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
 	float DistanceAlongSpline{};
 
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
 	float MoveSpeed{500.f};
 
 
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
 	bool ShouldBackTrack{false};
 
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
 	bool ShouldLoop{false};
 
 

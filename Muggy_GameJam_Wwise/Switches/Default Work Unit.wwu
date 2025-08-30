@@ -14,6 +14,15 @@
 						<Switch Name="Rail" ID="{8D3F87D9-D4CF-4D44-825D-1E81F670AE5D}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Surface" ID="{B0157E37-085F-487D-A8D8-B04F469A92AE}">
+					<ChildrenList>
+						<Switch Name="Dirt" ID="{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}"/>
+						<Switch Name="Grass" ID="{C138DEEC-FE4A-4C93-97B4-C4910E8C11E4}"/>
+						<Switch Name="Water" ID="{9A447EDF-8EA4-4350-B7AA-574E7D7F1528}"/>
+						<Switch Name="Stone" ID="{2383746C-1E6D-4326-B603-51DB50DD0CEC}"/>
+						<Switch Name="Sand" ID="{181EF92F-2B55-4098-97E2-56C71F010EBD}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

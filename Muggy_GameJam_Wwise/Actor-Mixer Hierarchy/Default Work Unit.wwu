@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4F2CF11A-5BE5-40FC-A966-34C2A7F44E81}" SchemaVersion="123">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{4F2CF11A-5BE5-40FC-A966-34C2A7F44E81}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4F2CF11A-5BE5-40FC-A966-34C2A7F44E81}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="TEST" ID="{578F9E30-B31A-46F1-B22A-25E2B92357EB}" ShortID="676528967">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="sx_plr_pistol_fire_01" ID="{6FBACB70-45D5-403C-9AAC-3C6701858122}" ShortID="323940709">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sx_plr_pistol_fire_01" ID="{DD56798B-EFA2-42B4-BE06-59F2423D8335}">
+									<Language>SFX</Language>
+									<AudioFile>sx_plr_pistol_fire_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="978490900"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sx_plr_pistol_fire_01" ID="{DD56798B-EFA2-42B4-BE06-59F2423D8335}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

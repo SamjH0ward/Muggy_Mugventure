@@ -16,6 +16,7 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="Beach" ID="{F0149EC7-4DAE-4382-891D-E811376F22ED}"/>
+						<CurrentSwitchRef Name="Dirt" ID="{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -63,7 +63,7 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class UCapsuleComponent* CapsuleComp;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	class UStaticMeshComponent* LighterMesh;
+	class USkeletalMeshComponent* LighterMesh;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ProjectileSpawnPoint;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
@@ -78,33 +78,55 @@ private:
 	-------------------------*/
 
 
-	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"))
 	float FireRate{};
 
-	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"))
 	int Damage{};
 
-	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"))
 	float WindowToShootAnyWay{3.0f};
 	
-	UPROPERTY(VisibleAnywhere, Category="Shooting", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(VisibleAnywhere, Category="Shooting", meta = (AllowPrivateAccess = "true"))
 	class ACharacter* PlayerPointer;
 
-	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(EditDefaultsOnly, Category="Shooting", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<class ACPP_Fireball> FireballClass;
 
-	UPROPERTY(EditDefaultsOnly, Category="Behaviour", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(EditDefaultsOnly, Category="Behaviour", meta = (AllowPrivateAccess = "true"))
 	float ReturningToNormalBehaviourLength{5.0f};
 
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Behaviour", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category="Behaviour", meta = (AllowPrivateAccess = "true"))
 	bool ShouldFollowSpline{true};
 
-	UPROPERTY(EditDefaultsOnly, Category="Behaviour", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(EditDefaultsOnly, Category="Behaviour", meta = (AllowPrivateAccess = "true"))
 	float ChaseCooldown{1.0f};
 
 
-	UPROPERTY(EditDefaultsOnly, Category="Movement", meta = (AllowPrivateAccess = "true"));
+	UPROPERTY(EditDefaultsOnly, Category="Movement", meta = (AllowPrivateAccess = "true"))
 	float RotationSpeed{};
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	FVector TransformOffset{}; 
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	float RotOffset{};
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	float DistanceAlongSpline{};
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	float MoveSpeed{500.f};
+
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	bool ShouldBackTrack{false};
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,  Category="Movement", meta = (AllowPrivateAccess = "true"))
+	bool ShouldLoop{false};
+
+
+
 
 	/*----------------------
 		  Internal Vars

@@ -34,7 +34,7 @@ void  ACPP_Fireball::OnHit(UPrimitiveComponent* hitComp, AActor* otherActor, UPr
 	if(!myOwner) return;
 
 	if(otherActor && otherActor != this && otherActor != myOwner)
-	{	
+	{
 		if(otherActor->ActorHasTag("Player")) DoDamage(otherActor);
 		Destroy();
 	}

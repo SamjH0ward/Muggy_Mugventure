@@ -18,6 +18,709 @@
 									<ObjectRef Name="SFX" ID="{2E0E8276-F4E9-4EF3-946F-AE907BBF4696}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<SwitchContainer Name="Footsteps" ID="{DAF2713C-27ED-4A12-B97C-0FA732940A77}" ShortID="413903474">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Dirt" ID="{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}" WorkUnitID="{0BD0F74A-7306-4D0E-B2A5-D9CF559F4E6B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Surface" ID="{B0157E37-085F-487D-A8D8-B04F469A92AE}" WorkUnitID="{0BD0F74A-7306-4D0E-B2A5-D9CF559F4E6B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Dirt" ID="{A3876AE6-68A8-49E8-A81A-E9F555CBF58B}" ShortID="798734784">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="sx_plr_fs_dirt_01" ID="{9CA91836-F1AB-4772-9F59-BEFB94F2BBA3}" ShortID="74143038">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_dirt_01" ID="{6B4C81F0-57DE-411B-9ED3-648C67E01668}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Dirt\sx_plr_fs_dirt_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="342495564"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_dirt_01" ID="{6B4C81F0-57DE-411B-9ED3-648C67E01668}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_dirt_02" ID="{013F636A-11FA-4F88-BE75-49EAA3AE7415}" ShortID="960893709">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_dirt_02" ID="{7637F8D3-2B79-4321-8902-EDD1111BD702}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Dirt\sx_plr_fs_dirt_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="911277979"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_dirt_02" ID="{7637F8D3-2B79-4321-8902-EDD1111BD702}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_dirt_03" ID="{D92DA539-486B-4AF4-AB1B-91C52E453A27}" ShortID="943686430">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_dirt_03" ID="{BF629F0C-46E2-43F9-9935-626D85729C0D}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Dirt\sx_plr_fs_dirt_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="298052121"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_dirt_03" ID="{BF629F0C-46E2-43F9-9935-626D85729C0D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_dirt_04" ID="{444D801F-2903-4485-A425-3B0DA5DC4040}" ShortID="27787268">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_dirt_04" ID="{B50C7D40-D469-42AA-9886-AF90E4E2E3EE}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Dirt\sx_plr_fs_dirt_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="524475210"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_dirt_04" ID="{B50C7D40-D469-42AA-9886-AF90E4E2E3EE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_dirt_05" ID="{54A54A92-58EB-42AB-B287-27F95283FCB5}" ShortID="639657876">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_dirt_05" ID="{957A4C44-48F5-458C-8B6C-E9F0C1A0316D}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Dirt\sx_plr_fs_dirt_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="375847829"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_dirt_05" ID="{957A4C44-48F5-458C-8B6C-E9F0C1A0316D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Grass" ID="{D24BA9CB-9B55-4524-A4AF-E1BA0D5A85B8}" ShortID="101545880">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="sx_plr_fs_grass_01" ID="{93195354-2186-4822-8820-0DBE08CD847C}" ShortID="268021346">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_grass_01" ID="{E27F138A-BF4F-4009-A9F2-7A616C294B82}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Grass\sx_plr_fs_grass_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="76982888"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_grass_01" ID="{E27F138A-BF4F-4009-A9F2-7A616C294B82}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_grass_02" ID="{6DC1E15F-688E-4E37-B57D-460EB52E0D5B}" ShortID="876607262">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_grass_02" ID="{C9E49701-4AF2-4E4E-A045-FDD1B728CE93}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Grass\sx_plr_fs_grass_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="341514687"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_grass_02" ID="{C9E49701-4AF2-4E4E-A045-FDD1B728CE93}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_grass_03" ID="{F2B311E0-61FF-49C0-8055-25997447EE7A}" ShortID="640569775">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_grass_03" ID="{7C870C59-667F-4844-BEC8-413B20362612}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Grass\sx_plr_fs_grass_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="70033265"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_grass_03" ID="{7C870C59-667F-4844-BEC8-413B20362612}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_grass_04" ID="{2E640B46-50E3-4229-A7DB-087EF673E585}" ShortID="818111082">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_grass_04" ID="{14E2E37C-364F-40E1-ABC0-21DCEDA7732D}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Grass\sx_plr_fs_grass_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="698831303"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_grass_04" ID="{14E2E37C-364F-40E1-ABC0-21DCEDA7732D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_grass_05" ID="{D5D96C89-C68D-4229-80AA-1F37D6A241FB}" ShortID="1002262590">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_grass_05" ID="{8F4EEDDD-7BF5-4E23-9B1F-8DC769930ADA}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Grass\sx_plr_fs_grass_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="428276764"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_grass_05" ID="{8F4EEDDD-7BF5-4E23-9B1F-8DC769930ADA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Sand" ID="{34D4FE40-FF83-4680-90C8-C2F0A7005DE6}" ShortID="955499986">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="sx_plr_fs_sand_01" ID="{FDF672B5-FB12-48A0-A261-4A21862A1ACD}" ShortID="688887294">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_sand_01" ID="{D310F2CD-D76C-4F4F-BED5-779A58FFB67D}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Sand\sx_plr_fs_sand_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="517041241"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_sand_01" ID="{D310F2CD-D76C-4F4F-BED5-779A58FFB67D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_sand_02" ID="{4C0407F4-FA13-4DD3-AAE1-94D66B10CFFA}" ShortID="435793738">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_sand_02" ID="{E785367A-9A1E-44CD-9539-5F7105C21D15}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Sand\sx_plr_fs_sand_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1839762"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_sand_02" ID="{E785367A-9A1E-44CD-9539-5F7105C21D15}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_sand_03" ID="{6782A9F4-D973-41F9-9912-67783AD192DE}" ShortID="366382710">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_sand_03" ID="{3060D1F8-07E1-4B08-83AF-8B785DAB4F05}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Sand\sx_plr_fs_sand_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="686839431"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_sand_03" ID="{3060D1F8-07E1-4B08-83AF-8B785DAB4F05}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_sand_04" ID="{68769F62-118E-433A-BECE-42B9213C9A08}" ShortID="636381033">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_sand_04" ID="{3BE8325E-A435-4D1B-9FAB-955912B2BA03}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Sand\sx_plr_fs_sand_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1023279465"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_sand_04" ID="{3BE8325E-A435-4D1B-9FAB-955912B2BA03}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_sand_05" ID="{8DFD8D48-8145-4D43-8271-4953229557FB}" ShortID="517934872">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_sand_05" ID="{A081C94A-5791-4FFB-A3C5-0AABC1243BED}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Sand\sx_plr_fs_sand_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="646045234"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_sand_05" ID="{A081C94A-5791-4FFB-A3C5-0AABC1243BED}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Water" ID="{65C23728-B21B-4BFA-938D-C88E389B853E}" ShortID="725790740">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="sx_plr_fs_water_01" ID="{DDD807E6-71CD-4AF2-ABE6-FEDFE14BFDF3}" ShortID="1051012176">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_water_01" ID="{4D43E73D-7735-4FEB-9BB2-45044E26EC33}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Water\sx_plr_fs_water_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="643739502"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_water_01" ID="{4D43E73D-7735-4FEB-9BB2-45044E26EC33}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_water_02" ID="{09A256E4-6228-4D40-BC2F-A897A1F1B691}" ShortID="699516544">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_water_02" ID="{4D816F95-00B6-4785-9387-97CAAFD4E606}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Water\sx_plr_fs_water_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="566973716"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_water_02" ID="{4D816F95-00B6-4785-9387-97CAAFD4E606}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_water_03" ID="{EDD7FA6E-69AB-4CC5-ADAD-D2E3CDB76905}" ShortID="291239897">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_water_03" ID="{C6B13D05-11F7-4AC4-89E3-79A0946E604A}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Water\sx_plr_fs_water_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="446875601"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_water_03" ID="{C6B13D05-11F7-4AC4-89E3-79A0946E604A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_water_04" ID="{34F1992A-47E8-487F-BA94-7FC5499CACEC}" ShortID="217775501">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_water_04" ID="{A4D61EF3-B3F0-4C3E-A8AD-242367F7C8C3}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Water\sx_plr_fs_water_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="405884899"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_water_04" ID="{A4D61EF3-B3F0-4C3E-A8AD-242367F7C8C3}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_water_05" ID="{3F1F27B9-5CAF-411C-A622-14EE5C7B88F2}" ShortID="784541084">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_water_05" ID="{A4D6F2A1-6579-4070-8D6F-080EAEAAB32B}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Water\sx_plr_fs_water_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="406784708"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_water_05" ID="{A4D6F2A1-6579-4070-8D6F-080EAEAAB32B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Stone" ID="{33882CC6-566F-42F8-8707-7B19C4E93788}" ShortID="799055965">
+											<PropertyList>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="sx_plr_fs_stone_01" ID="{A6B7A5F3-AED0-4CBD-86EF-C992FE8DE56A}" ShortID="664561927">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_stone_01" ID="{0651C434-A727-4188-9A0D-C51822DD6BF4}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Stone\sx_plr_fs_stone_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="507904719"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_stone_01" ID="{0651C434-A727-4188-9A0D-C51822DD6BF4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_stone_02" ID="{67D34E31-9521-403C-A1FB-0D8405B55597}" ShortID="653995384">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_stone_02" ID="{BDF2803E-04C4-47E9-B50B-BD73EA78D165}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Stone\sx_plr_fs_stone_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="236992628"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_stone_02" ID="{BDF2803E-04C4-47E9-B50B-BD73EA78D165}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_stone_03" ID="{832755E2-E868-470B-B452-B83F6EE33244}" ShortID="384206200">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_stone_03" ID="{D9BF93E0-150D-4CCF-B8D6-4912B2A60CD7}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Stone\sx_plr_fs_stone_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="688030103"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_stone_03" ID="{D9BF93E0-150D-4CCF-B8D6-4912B2A60CD7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_stone_04" ID="{350D394D-34BE-4BB2-85CD-6A9BC535BA2C}" ShortID="569817615">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_stone_04" ID="{97AFDDBD-89C7-43A6-9EA9-C302DD5C7112}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Stone\sx_plr_fs_stone_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="934094138"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_stone_04" ID="{97AFDDBD-89C7-43A6-9EA9-C302DD5C7112}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_fs_stone_05" ID="{595BD47D-5E3E-4A9F-BB02-40A64391FFB1}" ShortID="455704346">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_fs_stone_05" ID="{130E92C9-12E3-4480-B36E-42193A52F630}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\footsteps\Stone\sx_plr_fs_stone_05.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1049440914"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_fs_stone_05" ID="{130E92C9-12E3-4480-B36E-42193A52F630}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Water" ID="{65C23728-B21B-4BFA-938D-C88E389B853E}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Sand" ID="{34D4FE40-FF83-4680-90C8-C2F0A7005DE6}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Stone" ID="{33882CC6-566F-42F8-8707-7B19C4E93788}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Grass" ID="{D24BA9CB-9B55-4524-A4AF-E1BA0D5A85B8}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Dirt" ID="{A3876AE6-68A8-49E8-A81A-E9F555CBF58B}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Sand" ID="{181EF92F-2B55-4098-97E2-56C71F010EBD}"/>
+												<ItemList>
+													<ItemRef Name="Sand" ID="{34D4FE40-FF83-4680-90C8-C2F0A7005DE6}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Stone" ID="{2383746C-1E6D-4326-B603-51DB50DD0CEC}"/>
+												<ItemList>
+													<ItemRef Name="Stone" ID="{33882CC6-566F-42F8-8707-7B19C4E93788}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Water" ID="{9A447EDF-8EA4-4350-B7AA-574E7D7F1528}"/>
+												<ItemList>
+													<ItemRef Name="Water" ID="{65C23728-B21B-4BFA-938D-C88E389B853E}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Grass" ID="{C138DEEC-FE4A-4C93-97B4-C4910E8C11E4}"/>
+												<ItemList>
+													<ItemRef Name="Grass" ID="{D24BA9CB-9B55-4524-A4AF-E1BA0D5A85B8}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Dirt" ID="{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}"/>
+												<ItemList>
+													<ItemRef Name="Dirt" ID="{A3876AE6-68A8-49E8-A81A-E9F555CBF58B}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>
 				</Folder>

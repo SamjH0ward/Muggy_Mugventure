@@ -4,8 +4,16 @@
 		<WorkUnit Name="Sound_Work_Unit" ID="{3D2A4C44-DA60-42D6-9EA9-E4485901A0A3}" PersistMode="Standalone">
 			<ChildrenList>
 				<Folder Name="SFX_Events" ID="{A50FC6DB-DAF3-4348-982E-83B9756D703F}" ShortID="608773283">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="12"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Event Name="Play_TEST" ID="{9C65D22F-6B16-45EB-9CF7-90E13047739C}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="12"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{6739392B-AFB1-4F61-A966-D6EF74E709A4}" ShortID="1030167609">
 									<ReferenceList>
@@ -17,6 +25,10 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_Footstep" ID="{26470E1D-5EFD-4E54-BD7D-95CD54C54E4D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="12"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
 							<ChildrenList>
 								<Action Name="" ID="{4B00AD5B-3B12-4E90-AFF8-A64677E14D91}" ShortID="249744913">
 									<ReferenceList>
@@ -27,6 +39,91 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Jump Events" ID="{C9021D19-DDFB-4412-AC35-E4E4F0471C36}" ShortID="759244716">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="12"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Event Name="Play_JumpRelease" ID="{A71F33C9-6DD3-4035-BD50-3E8A8CB49FE9}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="12"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{E92217F8-B70C-4752-A81D-024DED72B179}" ShortID="352519553">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Jump_Foley" ID="{284BC95A-EB98-47F6-AD38-5A091CF2A0C6}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_JumpBuild" ID="{01DE7609-6A3E-4B8D-AB4C-07D3F4E72B33}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="12"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Action Name="" ID="{555B2B23-861B-426A-A39E-3EBDC1132714}" ShortID="814330646">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Jump_ChargeUp" ID="{06723545-C054-4D0A-BA70-CAD375780A02}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{B94A034F-788D-49DD-92C2-97B15938BB4F}" ShortID="685416354">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="1.5"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Jump_MaxChargeLoop" ID="{3695A768-3554-4509-98A9-FCED302CBCAD}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_JumpNode" ID="{6B83E35B-DED4-4E40-A7AD-91F41F2E9015}">
+									<ChildrenList>
+										<Action Name="" ID="{F183C487-0037-4F11-A29A-8CE94626F026}" ShortID="772465613">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Jump_chargeNodes" ID="{C43ABFF3-E7B0-4914-8370-25D42CDC117E}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_JumpReleasePower" ID="{08FC8107-0F78-41B0-BBB1-669E5F16EA0B}">
+									<ChildrenList>
+										<Action Name="" ID="{E06E640A-7327-4139-9BE6-F1E46F149724}" ShortID="467616468">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Jump_Release_Power" ID="{0E024AC4-4A70-4784-8C53-D7887BB4C1AB}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_JumpBuild" ID="{E353F7BB-776F-4BDA-BC52-308069144CB3}">
+									<ChildrenList>
+										<Action Name="" ID="{01E37A7E-E27D-47F2-A981-B969A79D2E63}" ShortID="951388400">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Jump_ChargeUp" ID="{06723545-C054-4D0A-BA70-CAD375780A02}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

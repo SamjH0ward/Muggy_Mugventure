@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{A5F087BD-75A8-41B1-B4E7-585F4A022733}",
     "Language": "SFX",
-    "Hash": "{B9E19352-D448-66E8-9CB9-6A6B8BF869FA}",
+    "Hash": "{9852B72E-C413-015F-04BF-7C9DDF80422D}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Common",
     "ShortName": "Common",
     "Path": "Common.bnk",
@@ -22,6 +22,22 @@
       "Location": "Memory",
       "ShortName": "Muggy\\footsteps\\Sand\\sx_plr_fs_sand_02.wav",
       "CachePath": "CA/{CA5DBEE9-4F5D-8437-42CE-21DE732EFB3A}.wem"
+     },
+     {
+      "Id": "10736405",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\jump fx\\charge nodes\\sx_plr_jump_chargeNode_04.wav",
+      "CachePath": "8A/{8A4B855C-9DCC-487E-FF11-25EFF9FD5883}.wem"
+     },
+     {
+      "Id": "48292384",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\jump fx\\sx_plr_jump_highPower_v2.wav",
+      "CachePath": "F6/{F63F93CE-2F5B-1F65-157F-7F5358EF6305}.wem"
      },
      {
       "Id": "70033265",
@@ -56,6 +72,14 @@
       "CachePath": "62/{621E5E56-AAF8-2A8C-12C8-A813A2ABEF70}.wem"
      },
      {
+      "Id": "338103151",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\jump fx\\charge nodes\\sx_plr_jump_chargeNode_01.wav",
+      "CachePath": "AC/{AC24CC47-A341-DED3-5F56-BD09BF980F52}.wem"
+     },
+     {
       "Id": "341514687",
       "Language": "SFX",
       "Streaming": "false",
@@ -80,6 +104,14 @@
       "CachePath": "DC/{DC20EE65-1350-FCD6-A896-592AAE2AA78A}.wem"
      },
      {
+      "Id": "395607440",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\jump fx\\sx_plr_jump_highPower_v1.wav",
+      "CachePath": "A6/{A67444AD-31FE-EBCB-FC72-C069FC84962D}.wem"
+     },
+     {
       "Id": "405884899",
       "Language": "SFX",
       "Streaming": "false",
@@ -94,6 +126,14 @@
       "Location": "Memory",
       "ShortName": "Muggy\\footsteps\\Water\\sx_plr_fs_water_05.wav",
       "CachePath": "2D/{2DA11649-F22D-3B06-7D4E-B2951D2D6EF1}.wem"
+     },
+     {
+      "Id": "406953845",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\jump fx\\charge\\sx_plr_jump_chargeUp_2s.wav",
+      "CachePath": "AA/{AA8721B8-DEF9-0C14-4660-87C74E1009A3}.wem"
      },
      {
       "Id": "428276764",
@@ -184,6 +224,30 @@
       "CachePath": "BE/{BE10A3E4-AF8F-61D3-A99C-1C95335B1B56}.wem"
      },
      {
+      "Id": "723139728",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\jump fx\\charge nodes\\sx_plr_jump_chargeNode_02.wav",
+      "CachePath": "A3/{A3930354-7BFF-EF5D-2A01-A027A6B97297}.wem"
+     },
+     {
+      "Id": "784937900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\jump foley\\sx_plr_jump_foley_02.wav",
+      "CachePath": "22/{220BBC56-835B-56EA-6922-FD3F5A3B30F8}.wem"
+     },
+     {
+      "Id": "867306805",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\jump fx\\charge\\sx_plr_jump_charge_loop.wav",
+      "CachePath": "80/{808A02CF-A098-50C3-25F7-C51ACC98DDC1}.wem"
+     },
+     {
       "Id": "911277979",
       "Language": "SFX",
       "Streaming": "false",
@@ -198,6 +262,14 @@
       "Location": "Memory",
       "ShortName": "Muggy\\footsteps\\Stone\\sx_plr_fs_stone_04.wav",
       "CachePath": "1A/{1A5AF55F-274B-95A1-C747-884B4594FA40}.wem"
+     },
+     {
+      "Id": "966757165",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\jump foley\\sx_plr_jump_foley.wav",
+      "CachePath": "45/{454E57D8-7394-9BF1-D103-43EE63261E4C}.wem"
      },
      {
       "Id": "978490900",
@@ -230,6 +302,7 @@
       "Name": "Play_Footstep",
       "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Play_Footstep",
       "GUID": "{26470E1D-5EFD-4E54-BD7D-95CD54C54E4D}",
+      "Color": "12",
       "DurationType": "OneShot",
       "DurationMin": "0.1",
       "DurationMax": "0.25",
@@ -489,10 +562,155 @@
       ]
      },
      {
+      "Id": "3091288642",
+      "Name": "Play_JumpBuild",
+      "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Jump Events\\Play_JumpBuild",
+      "GUID": "{01DE7609-6A3E-4B8D-AB4C-07D3F4E72B33}",
+      "Color": "12",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "406953845"
+       },
+       {
+        "Id": "867306805"
+       }
+      ]
+     },
+     {
+      "Id": "2758568302",
+      "Name": "Play_JumpNode",
+      "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Jump Events\\Play_JumpNode",
+      "GUID": "{6B83E35B-DED4-4E40-A7AD-91F41F2E9015}",
+      "Color": "12",
+      "DurationType": "OneShot",
+      "DurationMin": "1.25",
+      "DurationMax": "1.25",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "939619482",
+         "Id": "3377512839",
+         "GUID": "{EDC9374E-6C4F-4B46-8B7B-455F4777E880}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "723139728"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "939619482",
+         "Id": "3377512836",
+         "GUID": "{B4BAAA97-07DE-4E68-AB6B-7ABD3D843661}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "338103151"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "939619482",
+         "Id": "3377512838",
+         "GUID": "{C97172A3-243A-4243-8A50-4E95C7905F0B}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "10736405"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "939619482",
+         "Id": "3377512839",
+         "GUID": "{EDC9374E-6C4F-4B46-8B7B-455F4777E880}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "723139728"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "939619482",
+         "Id": "3377512836",
+         "GUID": "{B4BAAA97-07DE-4E68-AB6B-7ABD3D843661}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "338103151"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "939619482",
+         "Id": "3377512838",
+         "GUID": "{C97172A3-243A-4243-8A50-4E95C7905F0B}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "10736405"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "2238482621",
+      "Name": "Play_JumpRelease",
+      "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Jump Events\\Play_JumpRelease",
+      "GUID": "{A71F33C9-6DD3-4035-BD50-3E8A8CB49FE9}",
+      "Color": "12",
+      "DurationType": "OneShot",
+      "DurationMin": "0.69327086",
+      "DurationMax": "1.1659583",
+      "MediaRefs": [
+       {
+        "Id": "784937900"
+       },
+       {
+        "Id": "966757165"
+       }
+      ]
+     },
+     {
+      "Id": "313945480",
+      "Name": "Play_JumpReleasePower",
+      "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Jump Events\\Play_JumpReleasePower",
+      "GUID": "{08FC8107-0F78-41B0-BBB1-669E5F16EA0B}",
+      "Color": "12",
+      "DurationType": "OneShot",
+      "DurationMin": "2.1428542",
+      "DurationMax": "2.5064793",
+      "MediaRefs": [
+       {
+        "Id": "48292384"
+       },
+       {
+        "Id": "395607440"
+       }
+      ]
+     },
+     {
       "Id": "3187507146",
       "Name": "Play_TEST",
       "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Play_TEST",
       "GUID": "{9C65D22F-6B16-45EB-9CF7-90E13047739C}",
+      "Color": "12",
       "DurationType": "OneShot",
       "DurationMin": "0.5926667",
       "DurationMax": "0.5926667",
@@ -501,9 +719,51 @@
         "Id": "978490900"
        }
       ]
+     },
+     {
+      "Id": "2139278988",
+      "Name": "Stop_JumpBuild",
+      "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Jump Events\\Stop_JumpBuild",
+      "GUID": "{E353F7BB-776F-4BDA-BC52-308069144CB3}",
+      "Color": "12",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "406953845"
+       }
+      ]
      }
     ],
     "SwitchGroups": [
+     {
+      "Id": "939619482",
+      "Name": "Jump_ChargeLevel",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Jump_ChargeLevel",
+      "GUID": "{EC13F30C-7873-4BFE-B6CB-20D0FBF29956}",
+      "Switches": [
+       {
+        "Id": "3377512836",
+        "Name": "Jump_Level_01",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Jump_ChargeLevel\\Jump_Level_01",
+        "GUID": "{B4BAAA97-07DE-4E68-AB6B-7ABD3D843661}"
+       },
+       {
+        "Id": "3377512838",
+        "Name": "Jump_Level_03",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Jump_ChargeLevel\\Jump_Level_03",
+        "GUID": "{C97172A3-243A-4243-8A50-4E95C7905F0B}"
+       },
+       {
+        "Id": "3377512839",
+        "Name": "Jump_Level_02",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Jump_ChargeLevel\\Jump_Level_02",
+        "GUID": "{EDC9374E-6C4F-4B46-8B7B-455F4777E880}"
+       }
+      ]
+     },
      {
       "Id": "1834394558",
       "Name": "Surface",
@@ -545,6 +805,6 @@
     ]
    }
   ],
-  "FileHash": "{E7D8D612-4D46-C75E-A74F-DAA733F1453B}"
+  "FileHash": "{F5FC5DCF-5BD9-EA8E-F60F-BFAAFFC225A6}"
  }
 }

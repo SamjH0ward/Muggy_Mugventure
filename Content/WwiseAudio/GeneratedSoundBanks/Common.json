@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{A5F087BD-75A8-41B1-B4E7-585F4A022733}",
     "Language": "SFX",
-    "Hash": "{9852B72E-C413-015F-04BF-7C9DDF80422D}",
+    "Hash": "{2374835D-4AAC-6FFE-4713-141E0BEDEAD6}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Common",
     "ShortName": "Common",
     "Path": "Common.bnk",
@@ -30,6 +30,14 @@
       "Location": "Memory",
       "ShortName": "Muggy\\jump fx\\charge nodes\\sx_plr_jump_chargeNode_04.wav",
       "CachePath": "8A/{8A4B855C-9DCC-487E-FF11-25EFF9FD5883}.wem"
+     },
+     {
+      "Id": "20463453",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\landing\\sx_plr_land_water.wav",
+      "CachePath": "88/{88F28421-DEC4-046A-F48B-73EABE3B539D}.wem"
      },
      {
       "Id": "48292384",
@@ -54,6 +62,14 @@
       "Location": "Memory",
       "ShortName": "Muggy\\footsteps\\Grass\\sx_plr_fs_grass_01.wav",
       "CachePath": "19/{19C62E96-2A95-EFB8-775B-10990AC9F3B3}.wem"
+     },
+     {
+      "Id": "161404717",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\landing\\sx_plr_land_stone.wav",
+      "CachePath": "67/{676599D8-31C9-8746-9231-DFDF4DCA840C}.wem"
      },
      {
       "Id": "236992628",
@@ -96,12 +112,28 @@
       "CachePath": "3B/{3B6209DE-2692-F48B-1079-7EB78E97B72B}.wem"
      },
      {
+      "Id": "360921487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\landing\\sx_plr_land_grass_001.wav",
+      "CachePath": "E5/{E529A23C-EF5C-11C7-D673-1C5B7175953D}.wem"
+     },
+     {
       "Id": "375847829",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Muggy\\footsteps\\Dirt\\sx_plr_fs_dirt_05.wav",
       "CachePath": "DC/{DC20EE65-1350-FCD6-A896-592AAE2AA78A}.wem"
+     },
+     {
+      "Id": "384909825",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\landing\\sx_plr_land_sand.wav",
+      "CachePath": "58/{58BBA4E9-EDE0-3CC7-4503-08B47E69A5AC}.wem"
      },
      {
       "Id": "395607440",
@@ -133,7 +165,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Muggy\\jump fx\\charge\\sx_plr_jump_chargeUp_2s.wav",
-      "CachePath": "AA/{AA8721B8-DEF9-0C14-4660-87C74E1009A3}.wem"
+      "CachePath": "0E/{0E4F2AF1-FC60-9685-E3A9-1054448D3BC7}.wem"
      },
      {
       "Id": "428276764",
@@ -246,6 +278,14 @@
       "Location": "Memory",
       "ShortName": "Muggy\\jump fx\\charge\\sx_plr_jump_charge_loop.wav",
       "CachePath": "80/{808A02CF-A098-50C3-25F7-C51ACC98DDC1}.wem"
+     },
+     {
+      "Id": "899603235",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Muggy\\landing\\sx_plr_land_dirt.wav",
+      "CachePath": "E8/{E860E3B3-026B-3ABC-8294-CBFBE4B9A209}.wem"
      },
      {
       "Id": "911277979",
@@ -706,6 +746,150 @@
       ]
      },
      {
+      "Id": "2323405115",
+      "Name": "Play_Landing",
+      "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Play_Landing",
+      "GUID": "{B7BA2A23-53BD-47D0-985D-B698CEE0AD64}",
+      "Color": "12",
+      "DurationType": "OneShot",
+      "DurationMin": "0.19210416",
+      "DurationMax": "0.48945832",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "803837735",
+         "GUID": "{181EF92F-2B55-4098-97E2-56C71F010EBD}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "384909825"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "1216965916",
+         "GUID": "{2383746C-1E6D-4326-B603-51DB50DD0CEC}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "161404717"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "2654748154",
+         "GUID": "{9A447EDF-8EA4-4350-B7AA-574E7D7F1528}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "20463453"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "4248645337",
+         "GUID": "{C138DEEC-FE4A-4C93-97B4-C4910E8C11E4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "360921487"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "2195636714",
+         "GUID": "{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "899603235"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "803837735",
+         "GUID": "{181EF92F-2B55-4098-97E2-56C71F010EBD}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "384909825"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "1216965916",
+         "GUID": "{2383746C-1E6D-4326-B603-51DB50DD0CEC}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "161404717"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "2654748154",
+         "GUID": "{9A447EDF-8EA4-4350-B7AA-574E7D7F1528}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "20463453"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "4248645337",
+         "GUID": "{C138DEEC-FE4A-4C93-97B4-C4910E8C11E4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "360921487"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1834394558",
+         "Id": "2195636714",
+         "GUID": "{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "899603235"
+         }
+        ]
+       }
+      ]
+     },
+     {
       "Id": "3187507146",
       "Name": "Play_TEST",
       "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Play_TEST",
@@ -805,6 +989,6 @@
     ]
    }
   ],
-  "FileHash": "{F5FC5DCF-5BD9-EA8E-F60F-BFAAFFC225A6}"
+  "FileHash": "{740DA369-313D-D273-F1CD-20C214ABA575}"
  }
 }

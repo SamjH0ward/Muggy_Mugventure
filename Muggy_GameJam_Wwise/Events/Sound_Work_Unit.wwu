@@ -124,6 +124,17 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="Play_Landing" ID="{B7BA2A23-53BD-47D0-985D-B698CEE0AD64}">
+							<ChildrenList>
+								<Action Name="" ID="{3FD0BA11-1D2B-4F1D-92E7-49255FC498FF}" ShortID="717653044">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Landing" ID="{1C53A81B-30B1-46F2-9D7A-707709CDE813}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

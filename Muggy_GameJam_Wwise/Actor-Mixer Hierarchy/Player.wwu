@@ -1071,6 +1071,185 @@
 										</SwitchContainer>
 									</ChildrenList>
 								</ActorMixer>
+								<SwitchContainer Name="Landing" ID="{1C53A81B-30B1-46F2-9D7A-707709CDE813}" ShortID="102047844">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Dirt" ID="{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}" WorkUnitID="{0BD0F74A-7306-4D0E-B2A5-D9CF559F4E6B}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="Surface" ID="{B0157E37-085F-487D-A8D8-B04F469A92AE}" WorkUnitID="{0BD0F74A-7306-4D0E-B2A5-D9CF559F4E6B}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sx_plr_land_dirt" ID="{F94FA4E0-CF68-4630-A416-B69506E19B5D}" ShortID="85086917">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sx_plr_land_dirt" ID="{32213F25-03FF-4BBD-A7C9-17D202047014}">
+													<Language>SFX</Language>
+													<AudioFile>Muggy\landing\sx_plr_land_dirt.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="899603235"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sx_plr_land_dirt" ID="{32213F25-03FF-4BBD-A7C9-17D202047014}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sx_plr_land_grass_001" ID="{6AE54317-3599-452E-8050-DF7060988281}" ShortID="207020221">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sx_plr_land_grass_001" ID="{68475C48-B24F-46A7-B47E-C20C9023E30D}">
+													<Language>SFX</Language>
+													<AudioFile>Muggy\landing\sx_plr_land_grass_001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="360921487"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sx_plr_land_grass_001" ID="{68475C48-B24F-46A7-B47E-C20C9023E30D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sx_plr_land_sand" ID="{AEE48097-56B0-44EC-A9AA-1891BE1E72A5}" ShortID="697432176">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sx_plr_land_sand" ID="{28DCD41C-736F-4BAE-86EB-784FFEE53F23}">
+													<Language>SFX</Language>
+													<AudioFile>Muggy\landing\sx_plr_land_sand.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="384909825"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sx_plr_land_sand" ID="{28DCD41C-736F-4BAE-86EB-784FFEE53F23}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sx_plr_land_stone" ID="{C7967FB9-02D6-4547-95DA-D3F20045E41A}" ShortID="655113200">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sx_plr_land_stone" ID="{EABA7F49-EC58-4B12-BB4C-06DA722285EE}">
+													<Language>SFX</Language>
+													<AudioFile>Muggy\landing\sx_plr_land_stone.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="161404717"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sx_plr_land_stone" ID="{EABA7F49-EC58-4B12-BB4C-06DA722285EE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="sx_plr_land_water" ID="{5807BA43-0A7B-433F-8890-0E0160D130E0}" ShortID="1053654518">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sx_plr_land_water" ID="{9DA2B26F-DC35-40B5-AF0C-97150F74A893}">
+													<Language>SFX</Language>
+													<AudioFile>Muggy\landing\sx_plr_land_water.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="20463453"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sx_plr_land_water" ID="{9DA2B26F-DC35-40B5-AF0C-97150F74A893}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="sx_plr_land_grass_001" ID="{6AE54317-3599-452E-8050-DF7060988281}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="sx_plr_land_water" ID="{5807BA43-0A7B-433F-8890-0E0160D130E0}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="sx_plr_land_sand" ID="{AEE48097-56B0-44EC-A9AA-1891BE1E72A5}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="sx_plr_land_stone" ID="{C7967FB9-02D6-4547-95DA-D3F20045E41A}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="sx_plr_land_dirt" ID="{F94FA4E0-CF68-4630-A416-B69506E19B5D}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Sand" ID="{181EF92F-2B55-4098-97E2-56C71F010EBD}"/>
+												<ItemList>
+													<ItemRef Name="sx_plr_land_sand" ID="{AEE48097-56B0-44EC-A9AA-1891BE1E72A5}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Stone" ID="{2383746C-1E6D-4326-B603-51DB50DD0CEC}"/>
+												<ItemList>
+													<ItemRef Name="sx_plr_land_stone" ID="{C7967FB9-02D6-4547-95DA-D3F20045E41A}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Water" ID="{9A447EDF-8EA4-4350-B7AA-574E7D7F1528}"/>
+												<ItemList>
+													<ItemRef Name="sx_plr_land_water" ID="{5807BA43-0A7B-433F-8890-0E0160D130E0}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Grass" ID="{C138DEEC-FE4A-4C93-97B4-C4910E8C11E4}"/>
+												<ItemList>
+													<ItemRef Name="sx_plr_land_grass_001" ID="{6AE54317-3599-452E-8050-DF7060988281}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Dirt" ID="{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}"/>
+												<ItemList>
+													<ItemRef Name="sx_plr_land_dirt" ID="{F94FA4E0-CF68-4630-A416-B69506E19B5D}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>

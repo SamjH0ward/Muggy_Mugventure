@@ -720,6 +720,357 @@
 										</GroupingList>
 									</GroupingInfo>
 								</SwitchContainer>
+								<ActorMixer Name="Jump" ID="{34A527FA-422F-4B60-9C9E-F4C95843998C}" ShortID="495962512">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Jump_Foley" ID="{284BC95A-EB98-47F6-AD38-5A091CF2A0C6}" ShortID="1060263091">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Jump_Foley_01" ID="{8266B10A-B34F-4D6A-844B-B37AFC9808A4}" ShortID="147262177">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_jump_foley" ID="{9D6EE949-686C-4EA7-8F7F-CC375B225F36}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\jump foley\sx_plr_jump_foley.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="966757165"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_jump_foley" ID="{9D6EE949-686C-4EA7-8F7F-CC375B225F36}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Jump_Foley_02" ID="{A46B6EA9-6BD4-4F0C-B0AB-C254FB417A55}" ShortID="275581044">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_jump_foley_02" ID="{55DFA954-71B9-487E-B7A1-8F9F14BEBADC}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\jump foley\sx_plr_jump_foley_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="784937900"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_jump_foley_02" ID="{55DFA954-71B9-487E-B7A1-8F9F14BEBADC}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Jump_Release_Power" ID="{0E024AC4-4A70-4784-8C53-D7887BB4C1AB}" ShortID="143859222">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{2E0E8276-F4E9-4EF3-946F-AE907BBF4696}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="sx_plr_jump_foley" ID="{5B897830-119B-44C8-B03B-BD2CD5818D0E}" ShortID="849395523">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_jump_highPower_v2" ID="{253B8702-B8E2-4111-953E-82A9EFD928EF}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\jump fx\sx_plr_jump_highPower_v2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="48292384"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_jump_highPower_v2" ID="{253B8702-B8E2-4111-953E-82A9EFD928EF}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_jump_foley_02" ID="{67DD9B1A-1714-4E2F-8AE6-1138E1B4FB34}" ShortID="63437312">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_jump_highPower_v1" ID="{D5811900-D86E-4A87-A532-0EB9E1F80024}">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+																</Reference>
+															</ReferenceList>
+															<Language>SFX</Language>
+															<AudioFile>Muggy\jump fx\sx_plr_jump_highPower_v1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="395607440"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_jump_highPower_v1" ID="{D5811900-D86E-4A87-A532-0EB9E1F80024}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<Sound Name="Jump_ChargeUp" ID="{06723545-C054-4D0A-BA70-CAD375780A02}" ShortID="924289375">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sx_plr_jump_chargeUp_2s" ID="{23A069A3-81CC-4FF3-8841-2304602B36FA}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0730897969213025"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0609081641010856"/>
+														<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.146179593842605"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.10742264574423"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Muggy\jump fx\charge\sx_plr_jump_chargeUp_2s.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="406953845"/>
+													</MediaIDList>
+													<ObjectLists>
+														<ObjectList Name="Markers">
+															<Reference>
+																<Local>
+																	<Marker Name="" ID="{643DD2F0-9D31-47BC-B620-3D388AA76D0A}">
+																		<PropertyList>
+																			<Property Name="Time" Type="Real64" Value="2.69214085326798"/>
+																		</PropertyList>
+																	</Marker>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sx_plr_jump_chargeUp_2s" ID="{23A069A3-81CC-4FF3-8841-2304602B36FA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Jump_MaxChargeLoop" ID="{3695A768-3554-4509-98A9-FCED302CBCAD}" ShortID="353287819">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-1</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sx_plr_jump_charge_loop" ID="{AF71A0FC-130C-492D-BFC6-8F9FC496BBB1}">
+													<Language>SFX</Language>
+													<AudioFile>Muggy\jump fx\charge\sx_plr_jump_charge_loop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="867306805"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sx_plr_jump_charge_loop" ID="{AF71A0FC-130C-492D-BFC6-8F9FC496BBB1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<SwitchContainer Name="Jump_chargeNodes" ID="{C43ABFF3-E7B0-4914-8370-25D42CDC117E}" ShortID="613829724">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="Jump_Level_01" ID="{B4BAAA97-07DE-4E68-AB6B-7ABD3D843661}" WorkUnitID="{0BD0F74A-7306-4D0E-B2A5-D9CF559F4E6B}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Jump_ChargeLevel" ID="{EC13F30C-7873-4BFE-B6CB-20D0FBF29956}" WorkUnitID="{0BD0F74A-7306-4D0E-B2A5-D9CF559F4E6B}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="sx_plr_jump_chargeNode_02" ID="{D26E199C-4CEA-440E-B411-10B59D36FCFF}" ShortID="332680614">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{2E0E8276-F4E9-4EF3-946F-AE907BBF4696}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_jump_chargeNode_02" ID="{A770121D-7C4A-4FD9-A8A9-4CABECE0AF4E}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\jump fx\charge nodes\sx_plr_jump_chargeNode_02.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="723139728"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_jump_chargeNode_02" ID="{A770121D-7C4A-4FD9-A8A9-4CABECE0AF4E}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_jump_chargeNode_03" ID="{61108CD6-8817-4B3F-BCCC-D7676A5DED9E}" ShortID="534720955">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{2E0E8276-F4E9-4EF3-946F-AE907BBF4696}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_jump_chargeNode_03" ID="{CEAE049D-4E8F-4A02-B6CA-4C67A3E86515}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\jump fx\charge nodes\sx_plr_jump_chargeNode_03.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="393582945"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_jump_chargeNode_03" ID="{CEAE049D-4E8F-4A02-B6CA-4C67A3E86515}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_jump_chargeNode_04" ID="{FA77F51E-87BB-4803-8499-A6CA38008BD4}" ShortID="440350334">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{2E0E8276-F4E9-4EF3-946F-AE907BBF4696}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_jump_chargeNode_04" ID="{576BA1DA-83BE-4903-9C01-DDEC61ED97C5}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\jump fx\charge nodes\sx_plr_jump_chargeNode_04.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="10736405"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_jump_chargeNode_04" ID="{576BA1DA-83BE-4903-9C01-DDEC61ED97C5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="sx_plr_jump_chargeNode_01" ID="{6DB18E99-7DC5-45F3-BF81-E4E46DDB535B}" ShortID="1005086561">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{2E0E8276-F4E9-4EF3-946F-AE907BBF4696}" WorkUnitID="{A3C1B14C-D0AE-4828-B29D-8E313F24CBD5}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="sx_plr_jump_chargeNode_01" ID="{E540CD26-4763-4E2D-964B-354E51C41A0A}">
+															<Language>SFX</Language>
+															<AudioFile>Muggy\jump fx\charge nodes\sx_plr_jump_chargeNode_01.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="338103151"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="sx_plr_jump_chargeNode_01" ID="{E540CD26-4763-4E2D-964B-354E51C41A0A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="sx_plr_jump_chargeNode_04" ID="{FA77F51E-87BB-4803-8499-A6CA38008BD4}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="sx_plr_jump_chargeNode_01" ID="{6DB18E99-7DC5-45F3-BF81-E4E46DDB535B}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="sx_plr_jump_chargeNode_02" ID="{D26E199C-4CEA-440E-B411-10B59D36FCFF}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="sx_plr_jump_chargeNode_03" ID="{61108CD6-8817-4B3F-BCCC-D7676A5DED9E}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Jump_Level_02" ID="{EDC9374E-6C4F-4B46-8B7B-455F4777E880}"/>
+														<ItemList>
+															<ItemRef Name="sx_plr_jump_chargeNode_02" ID="{D26E199C-4CEA-440E-B411-10B59D36FCFF}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Jump_Level_01" ID="{B4BAAA97-07DE-4E68-AB6B-7ABD3D843661}"/>
+														<ItemList>
+															<ItemRef Name="sx_plr_jump_chargeNode_01" ID="{6DB18E99-7DC5-45F3-BF81-E4E46DDB535B}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Jump_Level_03" ID="{C97172A3-243A-4243-8A50-4E95C7905F0B}"/>
+														<ItemList>
+															<ItemRef Name="sx_plr_jump_chargeNode_04" ID="{FA77F51E-87BB-4803-8499-A6CA38008BD4}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+								</ActorMixer>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>

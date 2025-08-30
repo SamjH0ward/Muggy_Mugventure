@@ -84,6 +84,32 @@
     ],
     "SwitchGroups": [
      {
+      "Id": "939619482",
+      "Name": "Jump_ChargeLevel",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Jump_ChargeLevel",
+      "GUID": "{EC13F30C-7873-4BFE-B6CB-20D0FBF29956}",
+      "Switches": [
+       {
+        "Id": "3377512836",
+        "Name": "Jump_Level_01",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Jump_ChargeLevel\\Jump_Level_01",
+        "GUID": "{B4BAAA97-07DE-4E68-AB6B-7ABD3D843661}"
+       },
+       {
+        "Id": "3377512838",
+        "Name": "Jump_Level_03",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Jump_ChargeLevel\\Jump_Level_03",
+        "GUID": "{C97172A3-243A-4243-8A50-4E95C7905F0B}"
+       },
+       {
+        "Id": "3377512839",
+        "Name": "Jump_Level_02",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Jump_ChargeLevel\\Jump_Level_02",
+        "GUID": "{EDC9374E-6C4F-4B46-8B7B-455F4777E880}"
+       }
+      ]
+     },
+     {
       "Id": "1176052424",
       "Name": "Location",
       "ObjectPath": "\\Switches\\Default Work Unit\\Location",
@@ -174,6 +200,6 @@
     ]
    }
   ],
-  "FileHash": "{CB20D38B-7A4F-6C63-5C7B-7913BB46DE5E}"
+  "FileHash": "{8D937B20-02D1-7AB2-7B89-A0A8CA09EAA8}"
  }
 }

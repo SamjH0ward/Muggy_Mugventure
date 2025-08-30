@@ -849,9 +849,10 @@
 										</RandomSequenceContainer>
 										<Sound Name="Jump_ChargeUp" ID="{06723545-C054-4D0A-BA70-CAD375780A02}" ShortID="924289375">
 											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-5</Value>
+														<Value>-9</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -893,6 +894,70 @@
 													</ObjectLists>
 												</AudioFileSource>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{9A24742F-FA4D-4CFD-BCCC-6672289213CE}" ShortID="1058249083">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																		<ObjectRef Name="Jump_SideChain" ID="{D37C0898-A2B7-4CC8-B79B-2B348270ACB6}" WorkUnitID="{388717EC-04FF-4B2F-9BA3-1A705A984132}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+												</ObjectList>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{77965F8D-9C59-41FD-A015-1A01189414D5}" ShortID="389927877">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Volume"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="ChargeNodeVolume" ID="{4AEB22E8-BE8C-4750-A91F-B92AC3713663}" WorkUnitID="{75C31504-DCFC-40B8-86AE-9A3D9029DC6F}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{88375AAD-DCAE-4E92-A092-F49C00274451}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="3"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>-48</XPos>
+																						<YPos>0</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>-27.49689</XPos>
+																						<YPos>-0</YPos>
+																						<Flags>0</Flags>
+																						<SegmentShape>Log2</SegmentShape>
+																					</Point>
+																					<Point>
+																						<XPos>-14.94396</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>0</Flags>
+																						<SegmentShape>Exp2</SegmentShape>
+																					</Point>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>-200</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 											<ActiveSourceList>
 												<ActiveSource Name="sx_plr_jump_chargeUp_2s" ID="{23A069A3-81CC-4FF3-8841-2304602B36FA}" Platform="Linked"/>
 											</ActiveSourceList>
@@ -928,6 +993,14 @@
 											</ActiveSourceList>
 										</Sound>
 										<SwitchContainer Name="Jump_chargeNodes" ID="{C43ABFF3-E7B0-4914-8370-25D42CDC117E}" ShortID="613829724">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7B054DF2-67B5-42C0-8223-5E6E379A38D9}"/>
@@ -1032,6 +1105,21 @@
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{F5662582-26EC-4EE0-98DD-D2E911339EDB}" ShortID="839312309">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+																		<ObjectRef Name="JumpNode_Meter" ID="{15A3FDD2-BDC8-4614-AB1C-45201120915E}" WorkUnitID="{388717EC-04FF-4B2F-9BA3-1A705A984132}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
 											<GroupingInfo>
 												<GroupingBehaviorList>
 													<GroupingBehavior>

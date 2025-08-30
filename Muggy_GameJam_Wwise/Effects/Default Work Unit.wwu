@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{388717EC-04FF-4B2F-9BA3-1A705A984132}" SchemaVersion="123">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{388717EC-04FF-4B2F-9BA3-1A705A984132}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{388717EC-04FF-4B2F-9BA3-1A705A984132}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Jump_SideChain" ID="{D37C0898-A2B7-4CC8-B79B-2B348270ACB6}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3"/>
+				<Effect Name="JumpNode_Meter" ID="{15A3FDD2-BDC8-4614-AB1C-45201120915E}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.26"/>
+					</PropertyList>
+					<PluginData>
+	<GameParameter Name="ChargeNodeVolume" ID="{4AEB22E8-BE8C-4750-A91F-B92AC3713663}"/>
+</PluginData>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

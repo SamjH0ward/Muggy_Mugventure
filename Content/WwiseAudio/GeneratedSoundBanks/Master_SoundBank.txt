@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2932040671	Play_Music			\Music_Work_Unit\Music_Events\Play_Music	
+	3187507146	Play_TEST			\Sound_Work_Unit\SFX_Events\Play_TEST	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1176052424	Location			\Default Work Unit\Location	
@@ -22,12 +23,13 @@ State	ID	Name	State Group			Notes
 	2607556080	Menu	GameState			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	67129993	Beach_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\5C\{5C3B1077-2C18-D6DF-898F-454A2B701643}.wem		\Interactive Music Hierarchy\Music_System\Master_Music_Switch\Gameplay\Beach\Beach_TEMP\Beach_TEMP		9160580
-	98208193	Boss_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\85\{855885BF-BA85-5D06-1E6A-22583AA10881}.wem		\Interactive Music Hierarchy\Music_System\Master_Music_Switch\Gameplay\Boss\Boss_TEMP\Boss_TEMP		9715760
-	146269860	Vibrant_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\B4\{B41616FD-96B4-7B21-9382-B568D707AC29}.wem		\Interactive Music Hierarchy\Music_System\Master_Music_Switch\Gameplay\Vibrant\Vibrant_TEMP\Vibrant_TEMP		9160580
+	67129993	Beach_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\5C\{5C3B1077-2C18-D6DF-898F-454A2B701643}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Beach\Beach_TEMP\Beach_TEMP		9160580
+	98208193	Boss_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\85\{855885BF-BA85-5D06-1E6A-22583AA10881}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Boss\Boss_TEMP\Boss_TEMP		9715760
+	146269860	Vibrant_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\B4\{B41616FD-96B4-7B21-9382-B568D707AC29}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Vibrant\Vibrant_TEMP\Vibrant_TEMP		9160580
 	626063295	Menu_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\15\{15DDC170-03E5-B103-996D-131B3084980B}.wem		\Interactive Music Hierarchy\Music_System\Master_Music_Switch\Menu\Menu_TEMP\Menu_TEMP		5274316
-	721866178	Void_Intro_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\38\{386D5538-A09F-F0B0-98CF-6814B34550C7}.wem		\Interactive Music Hierarchy\Music_System\Master_Music_Switch\Gameplay\Void Intro\Void_Intro_TEMP\Void_Intro_TEMP		4719136
-	1014008810	Final_Zone_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\1A\{1A41D188-BCA3-A8B4-989D-E0C025F21235}.wem		\Interactive Music Hierarchy\Music_System\Master_Music_Switch\Gameplay\FinalZone\Final_Zone_TEMP\Final_Zone_TEMP		9160580
-	1016511180	Rail_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\96\{96DAE530-6347-E6AB-0446-35D22B5EF3C2}.wem		\Interactive Music Hierarchy\Music_System\Master_Music_Switch\Gameplay\Rail\Rail_TEMP\Rail_TEMP		2498412
-	1032591745	Void_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\2D\{2D44F5E4-2E74-2762-FCF9-EE4B5A482DBD}.wem		\Interactive Music Hierarchy\Music_System\Master_Music_Switch\Gameplay\Void\Void_TEMP\Void_TEMP		17488292
+	721866178	Void_Intro_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\38\{386D5538-A09F-F0B0-98CF-6814B34550C7}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Void Intro\Void_Intro_TEMP\Void_Intro_TEMP		4719136
+	978490900	sx_plr_pistol_fire_01	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\90\{90CD3E1B-9E3C-4955-BACB-A12DF0EC00EF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\TEST\sx_plr_pistol_fire_01		113888
+	1014008810	Final_Zone_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\1A\{1A41D188-BCA3-A8B4-989D-E0C025F21235}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\FinalZone\Final_Zone_TEMP\Final_Zone_TEMP		9160580
+	1016511180	Rail_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\96\{96DAE530-6347-E6AB-0446-35D22B5EF3C2}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Rail\Rail_TEMP\Rail_TEMP		2498412
+	1032591745	Void_TEMP	E:\GameProjects\Muggy_Mugventure_Master\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\2D\{2D44F5E4-2E74-2762-FCF9-EE4B5A482DBD}.wem		\Interactive Music Hierarchy\Music_System\Gameplay\Void\Void_TEMP\Void_TEMP		17488292
 

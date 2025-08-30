@@ -10,7 +10,7 @@
 								<Action Name="" ID="{2179FB2B-7781-45E5-BF19-7385BFB9440A}" ShortID="31420356">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Gameplay" ID="{3671C8C5-BBD6-45D1-A7E1-F5D5359E6246}" WorkUnitID="{7465F243-0F8D-4453-B1DC-E774DE803884}"/>
+											<ObjectRef Name="Master_Music_Switch" ID="{6E2BAAE9-5823-4EF4-AFBA-52D97311AF43}" WorkUnitID="{7465F243-0F8D-4453-B1DC-E774DE803884}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

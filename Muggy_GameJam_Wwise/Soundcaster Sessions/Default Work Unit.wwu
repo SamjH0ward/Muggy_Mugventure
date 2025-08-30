@@ -19,6 +19,41 @@
 						<CurrentSwitchRef Name="Dirt" ID="{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
+				<SoundcasterSession Name="Muggy_Jump_Soundcaster" ID="{7977995B-8266-4C41-96F9-D90416DB67DF}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_JumpBuild" ID="{01DE7609-6A3E-4B8D-AB4C-07D3F4E72B33}" WorkUnitID="{3D2A4C44-DA60-42D6-9EA9-E4485901A0A3}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_JumpBuild" ID="{E353F7BB-776F-4BDA-BC52-308069144CB3}" WorkUnitID="{3D2A4C44-DA60-42D6-9EA9-E4485901A0A3}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_JumpNode" ID="{6B83E35B-DED4-4E40-A7AD-91F41F2E9015}" WorkUnitID="{3D2A4C44-DA60-42D6-9EA9-E4485901A0A3}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_JumpMaxLoop" ID="{7C6EDEE3-48EC-43EB-AD2F-D2A8D97D5127}" WorkUnitID="{3D2A4C44-DA60-42D6-9EA9-E4485901A0A3}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_JumpMaxLoop" ID="{5D191618-B8B7-4672-B2B5-2BCF312379D5}" WorkUnitID="{3D2A4C44-DA60-42D6-9EA9-E4485901A0A3}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="ChargeNodeVolume" ID="{4AEB22E8-BE8C-4750-A91F-B92AC3713663}"/>
+							<Value>-19.8455790784558</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Dirt" ID="{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}"/>
+						<CurrentSwitchRef Name="Jump_Level_03" ID="{C97172A3-243A-4243-8A50-4E95C7905F0B}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundcasterSessions>

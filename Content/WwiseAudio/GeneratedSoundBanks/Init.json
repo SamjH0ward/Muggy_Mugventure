@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{DAAC8285-6BA2-86CC-793D-1D270095C25D}",
+    "Hash": "{6B72ECE3-B3CD-A599-3632-0AC51B89E66E}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -52,6 +52,14 @@
       "Name": "Music",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music",
       "GUID": "{D8677BC9-8133-4C05-B621-D887BFEEE670}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "4038034115",
+      "Name": "ChargeNodeVolume",
+      "ObjectPath": "\\Game Parameters\\Sound Game Parameters\\ChargeNodeVolume",
+      "GUID": "{4AEB22E8-BE8C-4750-A91F-B92AC3713663}"
      }
     ],
     "StateGroups": [
@@ -200,6 +208,6 @@
     ]
    }
   ],
-  "FileHash": "{8D937B20-02D1-7AB2-7B89-A0A8CA09EAA8}"
+  "FileHash": "{E430313C-E047-1164-135C-911C56879D4F}"
  }
 }

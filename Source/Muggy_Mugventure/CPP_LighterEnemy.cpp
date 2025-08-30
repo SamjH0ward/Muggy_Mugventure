@@ -65,19 +65,34 @@ void ACPP_LighterEnemy::BeginPlay()
 
 void ACPP_LighterEnemy::HandleOverlap(UPrimitiveComponent *OverlappedComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult)
 {
-	if(OtherActor->ActorHasTag("Player") && CurrentSate==ECurrentBehaviourType::Wander) CurrentSate = ECurrentBehaviourType::SearchForPlayer;
+	if(OtherActor->ActorHasTag("Player") && CurrentSate==ECurrentBehaviourType::Wander)
+	{
+		CurrentSate = ECurrentBehaviourType::SearchForPlayer;
+		DetectionRadius->SetSphereRadius(DetectionRadius->GetScaledSphereRadius()+AdditionalDetectionRadiusRangeOnEnteredDetectionRadius,false);
+	} 
+	else if(OtherActor->ActorHasTag("Player") && CurrentSate==ECurrentBehaviourType::ChaseCoolDown)
+	{
+		CurrentSate = ECurrentBehaviourType::InAreaOnCoolDown;
+	}
 }
 
 void ACPP_LighterEnemy::HandleLeavingDetectionRadius(UPrimitiveComponent *OverlappedComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex)
 {
 	if(OtherActor->ActorHasTag("Player") && CurrentSate == ECurrentBehaviourType::AttackingPlayer)
 	{
+		if(!HasShot) Fire();
 		CurrentSate = ECurrentBehaviourType::ReturningToNormal;
 		GetWorld()->GetTimerManager().SetTimer(ReturnToNormalTimer,this,&ACPP_LighterEnemy::ReturnToNormal, ReturningToNormalBehaviourLength,false);
+		DetectionRadius->SetSphereRadius(DetectionRadius->GetScaledSphereRadius()-AdditionalDetectionRadiusRangeOnEnteredDetectionRadius,false);
 	}
-	else if(OtherActor->ActorHasTag("Player"))
+	else if((OtherActor->ActorHasTag("Player") &&  CurrentSate == ECurrentBehaviourType::InAreaOnCoolDown))
+	{
+		CurrentSate = ECurrentBehaviourType::ChaseCoolDown;
+	}
+	else if(OtherActor->ActorHasTag("Player") && CurrentSate != ECurrentBehaviourType::ReturningToNormal)
 	{
 		ReturnToNormal();
+		DetectionRadius->SetSphereRadius(DetectionRadius->GetScaledSphereRadius()-AdditionalDetectionRadiusRangeOnEnteredDetectionRadius,false);
 	}
 	
 }
@@ -93,8 +108,16 @@ void ACPP_LighterEnemy::RotateToPlayer(FVector lookAtTarget)
 }
 
 void ACPP_LighterEnemy::RestCanAttackAgain()
-{
-	CurrentSate = ECurrentBehaviourType::Wander;
+{	
+	if(CurrentSate == ECurrentBehaviourType::InAreaOnCoolDown)
+	{
+		CurrentSate = ECurrentBehaviourType::SearchForPlayer;
+	}
+	else 
+	{
+		CurrentSate = ECurrentBehaviourType::Wander;
+	}
+	
 }
 
 // Called every frame
@@ -118,10 +141,12 @@ void ACPP_LighterEnemy::Tick(float DeltaTime)
 		case ECurrentBehaviourType::AttackingPlayer:
 			RotateToPlayer(PlayerPointer->GetActorLocation());
 			CheckIfShouldShoot(DeltaTime);
-
 		break;
 		case ECurrentBehaviourType::ReturningToNormal:
 			RotateToPlayer(PlayerPointer->GetActorLocation());
+		break;
+		case ECurrentBehaviourType::InAreaOnCoolDown:
+
 		break;
 		default:
 		break;
@@ -142,7 +167,6 @@ void ACPP_LighterEnemy::CheckIfShouldShoot(float DT)
 	bool HasHit = GetWorld()->LineTraceSingleByChannel(HitResult,Start,End,ECC_GameTraceChannel2);
 	if(HasHit && HitResult.GetActor()->ActorHasTag("Player"))
 	{	
-		
 		Fire();
 	} 
 	else CurrentWindowToShootAnyWay -= 1.0f * DT;
@@ -169,13 +193,28 @@ void ACPP_LighterEnemy::ReturnToNormal()
 {
 	ShouldFollowSpline = true;
 	CurrentWindowToShootAnyWay = WindowToShootAnyWay;
-	if(CurrentSate != ECurrentBehaviourType::ChaseCoolDown) 
+	
+	if(CurrentSate != ECurrentBehaviourType::ChaseCoolDown || CurrentSate != ECurrentBehaviourType::InAreaOnCoolDown) 
 		GetWorld()->GetTimerManager().SetTimer(ReturnToWanderTimer, this, &ACPP_LighterEnemy::RestCanAttackAgain, ChaseCooldown, false);
-	CurrentSate = ECurrentBehaviourType::ChaseCoolDown;
+
+
+	//Check if enemy is still in the area 
+	TArray<AActor*> Actors;
+	DetectionRadius->GetOverlappingActors(Actors);
+	for(AActor* Actor : Actors)
+	{
+		if(Actor->ActorHasTag("Player"))
+		{
+			CurrentSate = ECurrentBehaviourType::InAreaOnCoolDown;
+			break;
+		}
+		{
+			CurrentSate = ECurrentBehaviourType::ChaseCoolDown;
+		}
+	}
+	
 
 	HasShot = false;
-
-	
 }
 
 void ACPP_LighterEnemy::SearchForPlayer()

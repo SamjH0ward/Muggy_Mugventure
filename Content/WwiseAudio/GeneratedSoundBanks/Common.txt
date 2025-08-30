@@ -4,7 +4,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	2139278988	Stop_JumpBuild			\Sound_Work_Unit\SFX_Events\Jump Events\Stop_JumpBuild	
 	2238482621	Play_JumpRelease			\Sound_Work_Unit\SFX_Events\Jump Events\Play_JumpRelease	
 	2323405115	Play_Landing			\Sound_Work_Unit\SFX_Events\Play_Landing	
+	2408988576	Stop_JumpMaxLoop			\Sound_Work_Unit\SFX_Events\Jump Events\Stop_JumpMaxLoop	
 	2758568302	Play_JumpNode			\Sound_Work_Unit\SFX_Events\Jump Events\Play_JumpNode	
+	2957268586	Play_JumpMaxLoop			\Sound_Work_Unit\SFX_Events\Jump Events\Play_JumpMaxLoop	
 	3091288642	Play_JumpBuild			\Sound_Work_Unit\SFX_Events\Jump Events\Play_JumpBuild	
 	3187507146	Play_TEST			\Sound_Work_Unit\SFX_Events\Play_TEST	
 
@@ -21,6 +23,13 @@ Switch	ID	Name	Switch Group			Notes
 	2195636714	Dirt	Surface			
 	2654748154	Water	Surface			
 	4248645337	Grass	Surface			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	4038034115	ChargeNodeVolume			\Sound Game Parameters\ChargeNodeVolume	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1854948100	Jump_SideChain	Wwise Compressor			
+	3797864791	JumpNode_Meter	Wwise Meter			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1839762	sx_plr_fs_sand_02	D:\Emberfield Studios\Muggy_Mugventure\Muggy_GameJam_Wwise\.cache\CA\{CA5DBEE9-4F5D-8437-42CE-21DE732EFB3A}.wem		\Actor-Mixer Hierarchy\Player\Player\Player\Footsteps\Sand\sx_plr_fs_sand_02		19296

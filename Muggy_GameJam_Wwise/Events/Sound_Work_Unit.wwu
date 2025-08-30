@@ -73,17 +73,6 @@
 												</Reference>
 											</ReferenceList>
 										</Action>
-										<Action Name="" ID="{B94A034F-788D-49DD-92C2-97B15938BB4F}" ShortID="685416354">
-											<PropertyList>
-												<Property Name="Delay" Type="Real64" Value="1.5"/>
-												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Jump_MaxChargeLoop" ID="{3695A768-3554-4509-98A9-FCED302CBCAD}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
 									</ChildrenList>
 								</Event>
 								<Event Name="Play_JumpNode" ID="{6B83E35B-DED4-4E40-A7AD-91F41F2E9015}">
@@ -117,6 +106,31 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Jump_ChargeUp" ID="{06723545-C054-4D0A-BA70-CAD375780A02}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Play_JumpMaxLoop" ID="{7C6EDEE3-48EC-43EB-AD2F-D2A8D97D5127}">
+									<ChildrenList>
+										<Action Name="" ID="{959AE90E-58BC-4A13-80C1-9237957FFD1E}" ShortID="224454289">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Jump_MaxChargeLoop" ID="{3695A768-3554-4509-98A9-FCED302CBCAD}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Stop_JumpMaxLoop" ID="{5D191618-B8B7-4672-B2B5-2BCF312379D5}">
+									<ChildrenList>
+										<Action Name="" ID="{B33588FF-FC99-4C49-B34B-7179A441E034}" ShortID="495884393">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Jump_MaxChargeLoop" ID="{3695A768-3554-4509-98A9-FCED302CBCAD}" WorkUnitID="{1BFE8F40-FFA2-4C62-997C-C0B53F1975E8}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

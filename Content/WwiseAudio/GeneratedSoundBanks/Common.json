@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{A5F087BD-75A8-41B1-B4E7-585F4A022733}",
     "Language": "SFX",
-    "Hash": "{2374835D-4AAC-6FFE-4713-141E0BEDEAD6}",
+    "Hash": "{75F7B2DD-A2B9-B102-6632-29E455176A8A}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Common",
     "ShortName": "Common",
     "Path": "Common.bnk",
@@ -336,6 +336,26 @@
       "CachePath": "58/{58BA1D1E-7AED-7BA4-AB5F-4C8808089668}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1854948100",
+       "Name": "Jump_SideChain",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Jump_SideChain",
+       "GUID": "{D37C0898-A2B7-4CC8-B79B-2B348270ACB6}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
+      },
+      {
+       "Id": "3797864791",
+       "Name": "JumpNode_Meter",
+       "ObjectPath": "\\Effects\\Default Work Unit\\JumpNode_Meter",
+       "GUID": "{15A3FDD2-BDC8-4614-AB1C-45201120915E}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1602358412",
@@ -607,11 +627,30 @@
       "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Jump Events\\Play_JumpBuild",
       "GUID": "{01DE7609-6A3E-4B8D-AB4C-07D3F4E72B33}",
       "Color": "12",
-      "DurationType": "Infinite",
+      "DurationType": "OneShot",
+      "DurationMin": "1.961243",
+      "DurationMax": "1.961243",
       "MediaRefs": [
        {
         "Id": "406953845"
-       },
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1854948100"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2957268586",
+      "Name": "Play_JumpMaxLoop",
+      "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Jump Events\\Play_JumpMaxLoop",
+      "GUID": "{7C6EDEE3-48EC-43EB-AD2F-D2A8D97D5127}",
+      "Color": "12",
+      "DurationType": "Infinite",
+      "MediaRefs": [
        {
         "Id": "867306805"
        }
@@ -626,6 +665,13 @@
       "DurationType": "OneShot",
       "DurationMin": "1.25",
       "DurationMax": "1.25",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3797864791"
+        }
+       ]
+      },
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -638,7 +684,14 @@
          {
           "Id": "723139728"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3797864791"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -652,7 +705,14 @@
          {
           "Id": "338103151"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3797864791"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -665,7 +725,14 @@
          {
           "Id": "10736405"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3797864791"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -678,7 +745,14 @@
          {
           "Id": "723139728"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3797864791"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -692,7 +766,14 @@
          {
           "Id": "338103151"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3797864791"
+          }
+         ]
+        }
        },
        {
         "SwitchValue": {
@@ -705,7 +786,14 @@
          {
           "Id": "10736405"
          }
-        ]
+        ],
+        "PluginRefs": {
+         "ShareSets": [
+          {
+           "Id": "3797864791"
+          }
+         ]
+        }
        }
       ]
      },
@@ -918,7 +1006,38 @@
        {
         "Id": "406953845"
        }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1854948100"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2408988576",
+      "Name": "Stop_JumpMaxLoop",
+      "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Jump Events\\Stop_JumpMaxLoop",
+      "GUID": "{5D191618-B8B7-4672-B2B5-2BCF312379D5}",
+      "Color": "12",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "867306805"
+       }
       ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "4038034115",
+      "Name": "ChargeNodeVolume",
+      "ObjectPath": "\\Game Parameters\\Sound Game Parameters\\ChargeNodeVolume",
+      "GUID": "{4AEB22E8-BE8C-4750-A91F-B92AC3713663}"
      }
     ],
     "SwitchGroups": [
@@ -989,6 +1108,6 @@
     ]
    }
   ],
-  "FileHash": "{740DA369-313D-D273-F1CD-20C214ABA575}"
+  "FileHash": "{AD8EA6ED-91AA-A305-BA20-9F3747B03B2C}"
  }
 }

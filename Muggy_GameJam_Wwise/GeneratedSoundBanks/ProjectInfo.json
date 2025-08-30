@@ -12,14 +12,14 @@
     "GUID": "{C6722880-DEE8-46EB-9664-B4B7251DCF00}",
     "BasePlatform": "Mac",
     "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
-    "Path": "Mac"
+    "Path": "../../Content/WwiseAudio/GeneratedSoundBanks"
    },
    {
     "Name": "Windows",
     "GUID": "{46516FCC-68B2-4F7C-89CF-657911848144}",
     "BasePlatform": "Windows",
     "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
-    "Path": "Windows"
+    "Path": "../../Content/WwiseAudio/GeneratedSoundBanks"
    }
   ],
   "Languages": [
@@ -31,6 +31,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{46A63DDB-8C1B-6B24-F944-32AB94ABCD68}"
+  "FileHash": "{B9CAAC78-287D-FED8-A5E3-F3AFDD3818BB}"
  }
 }

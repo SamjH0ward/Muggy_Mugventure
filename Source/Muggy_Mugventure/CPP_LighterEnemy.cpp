@@ -4,7 +4,7 @@
 #include "CPP_LighterEnemy.h"
 #include "Components/SphereComponent.h"
 #include "Components/CapsuleComponent.h"
-#include "Components/StaticMeshComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/SceneComponent.h"
 #include "Components/SplineComponent.h"
@@ -31,9 +31,10 @@ ACPP_LighterEnemy::ACPP_LighterEnemy()
 	CapsuleComp->SetCollisionResponseToChannel(ECC_GameTraceChannel2, ECollisionResponse::ECR_Ignore);
 	
 
-	LighterMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Lighter"));
+	LighterMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Lighter"));
 	LighterMesh->SetupAttachment(CapsuleComp);
 	LighterMesh->SetCollisionResponseToChannel(ECC_GameTraceChannel2, ECollisionResponse::ECR_Ignore);
+	
 
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Projectile Spawn Point"));
 	ProjectileSpawnPoint->SetupAttachment(LighterMesh);
@@ -84,11 +85,11 @@ void ACPP_LighterEnemy::HandleLeavingDetectionRadius(UPrimitiveComponent *Overla
 void ACPP_LighterEnemy::RotateToPlayer(FVector lookAtTarget)
 {
 	FVector ToTarget = lookAtTarget - LighterMesh->GetComponentLocation();
-	FRotator LookAtRotation =  FRotator(0.0f, ToTarget.Rotation().Yaw,0.0f);
+	FRotator LookAtRotation =  FRotator(0.0f, ToTarget.Rotation().Yaw-90.f,0.0f);
+	
 
 	LighterMesh->SetWorldRotation(FMath::RInterpTo(LighterMesh->GetComponentRotation(), 
 	LookAtRotation, UGameplayStatics::GetWorldDeltaSeconds(this), RotationSpeed));
-
 }
 
 void ACPP_LighterEnemy::RestCanAttackAgain()
@@ -131,14 +132,17 @@ void ACPP_LighterEnemy::Tick(float DeltaTime)
 }
 
 void ACPP_LighterEnemy::CheckIfShouldShoot(float DT)
-{
+{	
+	if(HasShot) return;
+
 	FHitResult HitResult;
 	FVector Start = ProjectileSpawnPoint->GetComponentLocation();
 	FVector End = Start + ProjectileSpawnPoint->GetForwardVector() * ShootingRange;
 
 	bool HasHit = GetWorld()->LineTraceSingleByChannel(HitResult,Start,End,ECC_GameTraceChannel2);
 	if(HasHit && HitResult.GetActor()->ActorHasTag("Player"))
-	{
+	{	
+		
 		Fire();
 	} 
 	else CurrentWindowToShootAnyWay -= 1.0f * DT;
@@ -152,17 +156,13 @@ void ACPP_LighterEnemy::CheckIfShouldShoot(float DT)
 
 void ACPP_LighterEnemy::Fire()
 {
-	if(!HasShot)
-	{
+		HasShot = true;
 		ACPP_Fireball* Fireball = GetWorld()->SpawnActor<ACPP_Fireball>(FireballClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation());
 		Fireball->SetOwner(this);
 
 		CurrentWindowToShootAnyWay = WindowToShootAnyWay;
 		CurrentSate = ECurrentBehaviourType::ReturningToNormal;
 		GetWorld()->GetTimerManager().SetTimer(ReturnToNormalTimer,this,&ACPP_LighterEnemy::ReturnToNormal, ReturningToNormalBehaviourLength,false);
-
-		HasShot = true;
-	}	
 }
 
 void ACPP_LighterEnemy::ReturnToNormal()

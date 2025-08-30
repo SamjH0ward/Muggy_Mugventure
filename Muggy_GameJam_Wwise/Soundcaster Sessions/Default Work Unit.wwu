@@ -15,7 +15,8 @@
 						<CurrentStateRef Name="Gameplay" ID="{23914207-83B0-4E9E-B497-071ED943E2CC}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Void" ID="{4065148E-24B1-4B49-82E5-577ACBD43609}"/>
+						<CurrentSwitchRef Name="Beach" ID="{F0149EC7-4DAE-4382-891D-E811376F22ED}"/>
+						<CurrentSwitchRef Name="Dirt" ID="{5C901AEE-C91A-4654-A84B-BE2AEBE4BC54}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{DF965127-6E7C-4E54-B453-594B49BF5A27}",
     "Language": "SFX",
-    "Hash": "{0EC646AF-10EF-F2EC-6F3C-38641A45B932}",
+    "Hash": "{434EFC07-FB9D-91F5-77A4-2350BCB62FE1}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master_SoundBank",
     "ShortName": "Master_SoundBank",
     "Path": "Master_SoundBank.bnk",
@@ -649,97 +649,6 @@
           "Id": "1016511180"
          }
         ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1176052424",
-         "Id": "4075332698",
-         "GUID": "{F0149EC7-4DAE-4382-891D-E811376F22ED}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "67129993"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1176052424",
-         "Id": "8379913",
-         "GUID": "{E1E27ECC-A53E-4D4D-AC5A-9C3D131F2142}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "146269860"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1176052424",
-         "Id": "3370470011",
-         "GUID": "{4065148E-24B1-4B49-82E5-577ACBD43609}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1032591745"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1176052424",
-         "Id": "3653631999",
-         "GUID": "{40FD81D7-B234-47F6-80C0-2531AE132243}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "721866178"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1176052424",
-         "Id": "2537217085",
-         "GUID": "{0096E1B2-A390-42F2-8130-9E57F212790B}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1014008810"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1176052424",
-         "Id": "1560169506",
-         "GUID": "{BFFFCA50-B174-4A92-B220-5C609B44F2BF}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "98208193"
-         }
-        ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "Switch",
-         "GroupId": "1176052424",
-         "Id": "2043403997",
-         "GUID": "{8D3F87D9-D4CF-4D44-825D-1E81F670AE5D}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "1016511180"
-         }
-        ]
        }
       ]
      },
@@ -878,6 +787,6 @@
     ]
    }
   ],
-  "FileHash": "{59431749-2ED9-F61F-68C1-0278BAC58871}"
+  "FileHash": "{D3E72B7F-7F5C-499F-0C1D-64284EF528A7}"
  }
 }

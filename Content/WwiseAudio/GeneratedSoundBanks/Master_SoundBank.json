@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{DF965127-6E7C-4E54-B453-594B49BF5A27}",
     "Language": "SFX",
-    "Hash": "{9F201BF7-FC61-D379-1E0F-5BF018752467}",
+    "Hash": "{665F1660-D3D7-F182-004E-49F1C5D9DB64}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Master_SoundBank",
     "ShortName": "Master_SoundBank",
     "Path": "Master_SoundBank.bnk",
@@ -54,6 +54,14 @@
       "Location": "Memory",
       "ShortName": "Music\\Void_Intro_TEMP.wav",
       "CachePath": "38/{386D5538-A09F-F0B0-98CF-6814B34550C7}.wem"
+     },
+     {
+      "Id": "978490900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sx_plr_pistol_fire_01.wav",
+      "CachePath": "90/{90CD3E1B-9E3C-4955-BACB-A12DF0EC00EF}.wem"
      },
      {
       "Id": "1014008810",
@@ -201,6 +209,134 @@
           "Id": "626063295"
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4091656514",
+         "Id": "89505537",
+         "GUID": "{23914207-83B0-4E9E-B497-071ED943E2CC}"
+        },
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "4075332698",
+           "GUID": "{F0149EC7-4DAE-4382-891D-E811376F22ED}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "67129993"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "8379913",
+           "GUID": "{E1E27ECC-A53E-4D4D-AC5A-9C3D131F2142}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "146269860"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "3370470011",
+           "GUID": "{4065148E-24B1-4B49-82E5-577ACBD43609}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "1032591745"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "3653631999",
+           "GUID": "{40FD81D7-B234-47F6-80C0-2531AE132243}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "721866178"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "2537217085",
+           "GUID": "{0096E1B2-A390-42F2-8130-9E57F212790B}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "1014008810"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "1560169506",
+           "GUID": "{BFFFCA50-B174-4A92-B220-5C609B44F2BF}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "98208193"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "1176052424",
+           "Id": "2043403997",
+           "GUID": "{8D3F87D9-D4CF-4D44-825D-1E81F670AE5D}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "1016511180"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "4091656514",
+         "Id": "2607556080",
+         "GUID": "{980C5EC3-BD5D-4224-8AC4-0D5C01D584E0}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "626063295"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "Id": "3187507146",
+      "Name": "Play_TEST",
+      "ObjectPath": "\\Events\\Sound_Work_Unit\\SFX_Events\\Play_TEST",
+      "GUID": "{9C65D22F-6B16-45EB-9CF7-90E13047739C}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5926667",
+      "DurationMax": "0.5926667",
+      "MediaRefs": [
+       {
+        "Id": "978490900"
        }
       ]
      }
@@ -287,6 +423,6 @@
     ]
    }
   ],
-  "FileHash": "{3FE125BC-DC7E-F0D0-5675-23A6DFA1D933}"
+  "FileHash": "{2C70C4DF-3891-C22D-DB33-5BA8620AAC0D}"
  }
 }
